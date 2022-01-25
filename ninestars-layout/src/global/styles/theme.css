@@ -1,0 +1,26 @@
+:root{
+
+   --white: #fff;
+   --black:#000;
+   --overlay: rgba(122, 105, 96, 0.6);
+
+   /* background */
+   --mainBackground: #ef7f4d;
+   --secondaryBackground: #fef8f5;
+
+   /* fonts */
+   --hoverElements100: #eb5d1e;
+   --hoverElements90: #ee7843;
+
+   --titleFontFamily: "Raleway", sans-serif;
+   --textFontFomily: "Open Sans", sans-serif;
+   --textPrimaryColor: #4e4039;
+   
+
+
+   /* color: #7a6960;
+   
+   color: #a08f86;
+   color: #c2b7b1;    */
+  
+}
