@@ -80,6 +80,7 @@
 #inputEmail {
    width: 49.3125rem;
    height: 3rem;
+   padding-left:1rem ;
    border-left: 10px solid var(--title-color);
 }
 
