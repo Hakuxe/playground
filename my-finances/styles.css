@@ -1,0 +1,142 @@
+/* Global ====================================== */
+
+:root {
+	--white: #fff;
+
+	--background-body: #f0f2f5;
+
+	--green-400: #46aa26;
+	--green-500: #12a454;
+	--green-900: #2d4a22;
+
+    --red-700: #e92929;
+
+	--dark-blue-200: #969cb3;
+	--dark-blue-900: #363f5f;
+
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--background-body);
+	font-family: "Poppins", sans-serif;
+}
+
+.container {
+	width: min(90vw, 800px);
+	margin: auto;
+}
+/* titiles ======================================== */
+h2 {
+	margin-top: 3.2rem;
+	margin-bottom: 0.8rem;
+	color: var(--dark-blue-900);
+
+	font-weight: normal;
+}
+
+/* Header ====================================== */
+
+header {
+	background-color: var(--green-900);
+	padding: 2rem 0 10rem;
+	text-align: center;
+}
+
+#logo {
+	color: var(--white);
+}
+
+/* Balance ====================================== */
+
+#balance {
+	margin-top: -8rem;
+}
+
+#balance h2 {
+	color: var(--white);
+	margin-top: 0;
+}
+
+/* cards */
+
+.card {
+	background-color: var(--white);
+	padding: 1.5rem 2rem;
+	border-radius: 0.25rem;
+	margin-bottom: 2rem;
+}
+
+.card h3 {
+	font-weight: normal;
+	font-size: 1rem;
+}
+
+.card p {
+	font-size: 2rem;
+	line-height: 3rem;
+
+	margin-top: 1rem;
+}
+
+.card.total {
+	background-color: var(--green-400);
+	color: var(--white);
+}
+
+/* transaction ====================================== */
+#data-table {
+    width: 100%;
+    border-spacing: 0 0.5rem;
+    font-weight: normal;
+    color: var(--dark-blue-200);
+}
+table thead th{
+    background-color: var(--white);
+	padding: 1rem 2rem;
+    
+	text-align: left;
+    
+    border-radius: 0.25rem;
+    opacity: 1;
+}
+
+table tbody tr{
+    opacity: 0.6;
+}
+
+table tbody tr:hover{
+    opacity: 1;
+}
+
+table tbody td{
+    background-color: var(--white);
+
+    border-radius: 0.25rem;
+    padding: 1rem 2rem;
+}
+
+
+td.description {
+    color:var(--dark-blue-900);
+}
+
+td.income{
+    color: var(--green-500);
+}
+td.expense{
+    color: var(--red-700);
+}
+/* Footer ====================================== */
+footer {
+	text-align: center;
+    padding: 4rem 0 2rem;
+    color: var(--dark-blue-900);
+
+    opacity: 0.6;
+}

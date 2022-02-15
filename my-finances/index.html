@@ -5,13 +5,20 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>My.Finances</title>
+		<link rel="stylesheet" href="./styles.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
 		<header>
 			<h1 id="logo">My.Finances</h1>
 		</header>
 
-		<main>
+		<main class="container">
 			<section id="balance">
 				<h2>Balanço</h2>
 				<div class="card">
@@ -22,7 +29,7 @@
 					<h3>Saídas</h3>
 					<p>R$ 2000,0</p>
 				</div>
-				<div class="card">
+				<div class="card total">
 					<h3>Total</h3>
 					<p>R$ 3000,00</p>
 					<!-- 
@@ -45,28 +52,28 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td>Luz</td>
-							<td>- R$ 340,00</td>
-							<td>01/02/2021</td>
+							<td class="description">Luz</td>
+							<td class="expense">- R$ 340,00</td>
+							<td class="date">01/02/2021</td>
 						</tr>
 						<tr>
-							<td>Salário</td>
-							<td>R$ 2500,00</td>
-							<td>05/02/2021</td>
+							<td class="description">Salário</td>
+							<!-- a class income/expense deveria ser adicionada automaticamente caso valor positivo /negativo -->
+							<td class="income">R$ 2500,00</td>
+							<td class="date">05/02/2021</td>
 						</tr>
 						<tr>
-							<td>Internet</td>
-							<td>- R$ 110,00</td>
-							<td>01/02/2021</td>
+							<td class="description">Internet</td>
+							<td class="expense">- R$ 110,00</td>
+							<td class="date">01/02/2021</td>
 						</tr>
 					</tbody>
 				</table>
 			</section>
 		</main>
 
-        <footer>
-            <p>copyright - my.finances</p>
-        </footer>
-
+		<footer>
+			<p>copyright - my.finances</p>
+		</footer>
 	</body>
 </html>
