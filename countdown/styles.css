@@ -1,0 +1,24 @@
+:root {
+    /* achar um verde mais forte  */
+    --aqua-300: #63FFB9;
+    --black-400: #4D4C59;
+    
+    --light-text-color: #C8C8C8;
+    --text-color: #9C9AB6;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.container{
+    display: flex;
+}
+
+button{
+    background-color: var(--aqua-300);
+    border: none;
+    border-radius: 0.25rem;
+    padding: .8rem;
+}
