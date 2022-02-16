@@ -15,22 +15,34 @@
 	</head>
 	<body>
 		<header>
-			<h1 id="logo">My.Finances</h1>
+			<img d="logo" src="./assets/logo.svg" alt="logo dev finances" />
 		</header>
 
 		<main class="container">
 			<section id="balance">
-				<h2>Balanço</h2>
+				<h2 class="sr-only">Balanço</h2>
 				<div class="card">
-					<h3>Entradas</h3>
+					<h3>
+						<span>Entradas</span>
+						<img src="./assets/income.svg" alt="imagem  ganhos" />
+					</h3>
 					<p>R$ 5000,00</p>
 				</div>
 				<div class="card">
-					<h3>Saídas</h3>
+					<h3>
+						<span>Saídas</span>
+						<img src="./assets/expense.svg" alt="imagem gastos" />
+					</h3>
 					<p>R$ 2000,0</p>
 				</div>
 				<div class="card total">
-					<h3>Total</h3>
+					<h3>
+						<span>Total</span>
+						<img
+							src="./assets/total.svg"
+							alt="imagem de diferença entre ganhos e gastos"
+						/>
+					</h3>
 					<p>R$ 3000,00</p>
 					<!-- 
                         <h3> porcentagem(%) gasta </h3> 
@@ -40,14 +52,17 @@
 			</section>
 
 			<section id="transaction">
-				<h2>Transações</h2>
+				<h2 class="sr-only">Transações</h2>
 				<!-- linhas vermelhas pra saídas ??  -->
+
+				<a href="#" class="button new">+ Nova transação</a>
 				<table id="data-table">
 					<thead>
 						<tr>
 							<th>Descrição</th>
 							<th>valor</th>
 							<th>Data</th>
+							<th></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -55,22 +70,38 @@
 							<td class="description">Luz</td>
 							<td class="expense">- R$ 340,00</td>
 							<td class="date">01/02/2021</td>
+							<td>
+								<img src="./assets/minus.svg" alt="remover registro de transação">
+							</td>
 						</tr>
 						<tr>
 							<td class="description">Salário</td>
 							<!-- a class income/expense deveria ser adicionada automaticamente caso valor positivo /negativo -->
 							<td class="income">R$ 2500,00</td>
 							<td class="date">05/02/2021</td>
+							<td>
+								<img src="./assets/minus.svg" alt="remover registro de transação">
+							</td>
 						</tr>
 						<tr>
 							<td class="description">Internet</td>
 							<td class="expense">- R$ 110,00</td>
 							<td class="date">01/02/2021</td>
+							<td>
+								<img src="./assets/minus.svg" alt="remover registro de transação">
+							</td>
 						</tr>
 					</tbody>
 				</table>
 			</section>
 		</main>
+
+
+		<div class="modal-overlay active">
+			<div class="modal-container">
+				<div class="modal-content">salve</div>
+			</div>
+		</div>
 
 		<footer>
 			<p>copyright - my.finances</p>

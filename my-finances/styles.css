@@ -5,6 +5,7 @@
 
 	--background-body: #f0f2f5;
 
+	--green-300: #3dd705;
 	--green-400: #46aa26;
 	--green-500: #12a454;
 	--green-900: #2d4a22;
@@ -27,6 +28,20 @@ body {
 	font-family: "Poppins", sans-serif;
 }
 
+.sr-only{
+	/* elementos que devem ser vistos apenas pelos leitores de tela  */
+
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0,0,0,0);
+	white-space: nowrap;
+	border-width: 0;
+}
+
 .container {
 	width: min(90vw, 800px);
 	margin: auto;
@@ -38,6 +53,24 @@ h2 {
 	color: var(--dark-blue-900);
 
 	font-weight: normal;
+}
+
+
+/* links e buttons ======================================== */
+
+a{
+	color: var(--green-400);
+	text-decoration: none;
+}
+
+a:hover{
+	color: var(--green-300);
+	transition: 150ms ease-in-out;
+}
+
+.button.new{
+	display: inline-block;
+	margin-bottom: .8rem;
 }
 
 /* Header ====================================== */
@@ -75,6 +108,10 @@ header {
 .card h3 {
 	font-weight: normal;
 	font-size: 1rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .card p {
@@ -90,6 +127,12 @@ header {
 }
 
 /* transaction ====================================== */
+
+#transaction{
+	overflow-x: auto ;
+	display: block;
+	width: 100%;
+}
 #data-table {
     width: 100%;
     border-spacing: 0 0.5rem;
@@ -132,6 +175,37 @@ td.income{
 td.expense{
     color: var(--red-700);
 }
+
+/* modal ============================================= */
+
+.modal-overlay{
+	width: 100%;
+	height: 100%;
+
+	background-color: rgba(0, 0, 0, 0.7);
+
+	position: fixed;
+	top: 0;
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	opacity: 0;
+	visibility: hidden;
+}
+
+.modal-overlay.active{
+	opacity: 1;
+	visibility: visible;
+}
+
+.modal-container{	
+	background-color: var(--background-body);
+	padding: 2.4rem;
+
+}
+
 /* Footer ====================================== */
 footer {
 	text-align: center;
@@ -139,4 +213,22 @@ footer {
     color: var(--dark-blue-900);
 
     opacity: 0.6;
+}
+
+
+
+
+
+/* responsive ====================================== */
+
+@media(min-width: 800px){
+	html{
+		font-size: 87.5%;
+	}
+
+	#balance{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+	}
 }
