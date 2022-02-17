@@ -71,7 +71,10 @@
 							<td class="expense">- R$ 340,00</td>
 							<td class="date">01/02/2021</td>
 							<td>
-								<img src="./assets/minus.svg" alt="remover registro de transação">
+								<img
+									src="./assets/minus.svg"
+									alt="remover registro de transação"
+								/>
 							</td>
 						</tr>
 						<tr>
@@ -80,7 +83,10 @@
 							<td class="income">R$ 2500,00</td>
 							<td class="date">05/02/2021</td>
 							<td>
-								<img src="./assets/minus.svg" alt="remover registro de transação">
+								<img
+									src="./assets/minus.svg"
+									alt="remover registro de transação"
+								/>
 							</td>
 						</tr>
 						<tr>
@@ -88,7 +94,10 @@
 							<td class="expense">- R$ 110,00</td>
 							<td class="date">01/02/2021</td>
 							<td>
-								<img src="./assets/minus.svg" alt="remover registro de transação">
+								<img
+									src="./assets/minus.svg"
+									alt="remover registro de transação"
+								/>
 							</td>
 						</tr>
 					</tbody>
@@ -96,10 +105,48 @@
 			</section>
 		</main>
 
-
 		<div class="modal-overlay active">
 			<div class="modal-container">
-				<div class="modal-content">salve</div>
+				<form id="form">
+					<h2>Nova transação</h2>
+					<div class="input-group">
+						<label class="sr-only" for="transaction-description"
+							>Descrição</label
+						>
+						<input
+							type="text"
+							id="transaction-description"
+							name="transaction-description"
+							placeholder="Descrição"
+						/>
+					</div>
+
+					<div class="input-group">
+						<label class="sr-only" for="amount">Descrição</label>
+						<input
+							type="number"
+							id="amount"
+							name="amount"
+							placeholder="0,00"
+							step="0.01"
+						/>
+						<small class="help">
+							Use um sinal - (negativo) para despesas e , (virgula) para
+							casas decimais
+						</small>
+						<!-- input do tipo radio box melhor -->
+					</div>
+
+					<div class="input-group">
+						<label class="sr-only" for="date">Data</label>
+						<input type="date" id="date" name="date" />
+					</div>
+
+					<div class="input-group actions">
+						<a href="#" class="button cancel"> Cancelar</a>
+						<button type="submit">Salvar</button>
+					</div>
+				</form>
 			</div>
 		</div>
 
