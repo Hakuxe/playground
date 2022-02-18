@@ -14,33 +14,36 @@
 		/>
 	</head>
 	<body>
-		<img src="./assets/top-image.svg" alt="" />
+		<!-- <img id="background-top"src="./assets/top-image.svg" alt="" /> -->
+		<div id="background-top"></div>
+
+
 		<div class="container">
 			<main class="countdown-container">
 				<h1>READY TO LAUNCH IN...</h1>
 
 				<div class="countdown">
-					<div class="days">
+					<div >
 						<h4 >Dias</h4>
-						<h2 class="clock-number">22</h2>
+						<h2 class="clock-number" id="days">22</h2>
 					</div>
 					<span class="separator">:</span>
 
-					<div class="hours">
+					<div class="box-hours">
 						<h4>Horas</h4>
-						<h2 class="clock-number">10</h2>
+						<h2 id="hours"  class="clock-number">10</h2>
 					</div>
 					<span class="separator">:</span>
 
-					<div class="minutes">
+					<div class="box-minutes">
 						<h4>Minutos</h4>
-						<h2 class="clock-number">22</h2>
+						<h2 id="minutes" class="clock-number">22</h2>
 					</div>
 					<span class="separator">:</span>
 
-					<div class="seconds">
+					<div>
 						<h4>Segundos</h4>
-						<h2 class="clock-number">22</h2>
+						<h2 id="seconds" class="clock-number">22</h2>
 					</div>
 				</div>
 
@@ -56,7 +59,10 @@
 				/>
 			</section>
 		</div>
-		<img src="./assets/bottom-image.svg" alt="" />
+
+		
+		<div id="background-bottom"></div>
+
 
 		<script src="scripts.js"></script>
 	</body>
