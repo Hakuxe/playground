@@ -26,14 +26,14 @@
 						<span>Entradas</span>
 						<img src="./assets/income.svg" alt="imagem  ganhos" />
 					</h3>
-					<p>R$ 5000,00</p>
+					<p id="incomeDisplay">R$ 5000,00</p>
 				</div>
 				<div class="card">
 					<h3>
 						<span>Saídas</span>
 						<img src="./assets/expense.svg" alt="imagem gastos" />
 					</h3>
-					<p>R$ 2000,0</p>
+					<p id="expenseDisplay">R$ 2000,0</p>
 				</div>
 				<div class="card total">
 					<h3>
@@ -43,7 +43,7 @@
 							alt="imagem de diferença entre ganhos e gastos"
 						/>
 					</h3>
-					<p>R$ 3000,00</p>
+					<p id="totalDisplay">R$ 3000,00</p>
 					<!-- 
                         <h3> porcentagem(%) gasta </h3> 
                         // quanto do valor da entrada foi gasto 
@@ -66,40 +66,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td class="description">Luz</td>
-							<td class="expense">- R$ 340,00</td>
-							<td class="date">01/02/2021</td>
-							<td>
-								<img
-									src="./assets/minus.svg"
-									alt="remover registro de transação"
-								/>
-							</td>
-						</tr>
-						<tr>
-							<td class="description">Salário</td>
-							<!-- a class income/expense deveria ser adicionada automaticamente caso valor positivo /negativo -->
-							<td class="income">R$ 2500,00</td>
-							<td class="date">05/02/2021</td>
-							<td>
-								<img
-									src="./assets/minus.svg"
-									alt="remover registro de transação"
-								/>
-							</td>
-						</tr>
-						<tr>
-							<td class="description">Internet</td>
-							<td class="expense">- R$ 110,00</td>
-							<td class="date">01/02/2021</td>
-							<td>
-								<img
-									src="./assets/minus.svg"
-									alt="remover registro de transação"
-								/>
-							</td>
-						</tr>
+						<!-- dados vindo do javascript -->
 					</tbody>
 				</table>
 			</section>
@@ -107,7 +74,7 @@
 
 		<div class="modal-overlay">
 			<div class="modal-container">
-				<form id="form">
+				<form id="form" onsubmit="FORM.submit(event)">
 					<h2>Nova transação</h2>
 					<div class="input-group">
 						<label class="sr-only" for="transaction-description"
