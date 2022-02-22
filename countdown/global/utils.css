@@ -1,0 +1,32 @@
+
+
+/* utils =============================================== */
+
+.primary-button {
+	background-color: var(--aqua-300);
+	color: var(--white);
+
+	border: none;
+	border-radius: 0.25rem;
+
+	padding: 0.8rem 3rem;
+	margin-top: 2rem;
+
+	font-weight: bold;
+	opacity: 1;
+}
+
+.primary-button:hover {
+	opacity: 0.8;
+
+	transition: 150ms ease;
+}
+
+.inactive{
+	visibility: hidden;
+	opacity: 0;
+
+}
+
+
+

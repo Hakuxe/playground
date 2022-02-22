@@ -1,0 +1,35 @@
+/* global ============================================ */
+
+:root {
+	/* achar um verde mais forte  */
+	--aqua-300: #51e0a0;
+	--gray-700: #4d4c59;
+
+	--light-text-color: #c8c8c8;
+	--text-color: #9c9ab6;
+
+	--white: #fff;
+	--black: #000;
+
+	--background-modal: #fafafa;
+	--border-black: rgba(0, 0, 0, 0.4);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+}
+
+img {
+	max-width: 100%;
+}
+
+
+.container {
+	display: flex;
+}
