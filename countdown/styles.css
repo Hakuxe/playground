@@ -33,28 +33,6 @@ img {
 	display: flex;
 }
 
-/* backgroun-mosaic */
-
-#background-top {
-	height: 7vh;
-	background-image: url("assets/top-image.svg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: bottom;
-	position: relative;
-	top: 0;
-}
-
-#background-bottom {
-	height: 10vh;
-	background-image: url("/assets/bottom-image.svg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: top;
-
-	position: relative;
-	bottom: 0;
-}
 
 /* utils =============================================== */
 
@@ -77,6 +55,42 @@ img {
 
 	transition: 150ms ease;
 }
+
+.inactive{
+	visibility: hidden;
+	opacity: 0;
+
+}
+
+
+
+
+
+/* backgroun-mosaic */
+
+#background-top {
+	height: 7vh;
+	background-image: url("assets/top-image.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom;
+	position: relative;
+	top: 0;
+}
+
+#background-bottom {
+	height: 10vh;
+	width: 100%;
+	background-image: url("/assets/bottom-image.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
+
+	position: relative;
+	bottom: 0;
+
+}
+
 
 /* main content +======================================= */
 .countdown-container {
@@ -135,6 +149,10 @@ img {
 	position: re;
 }
 
+
+
+/* modal ================================= */
+
 .modal-overlay {
 	background-color: rgba(0, 0, 0, 0.5);
 
@@ -175,6 +193,11 @@ img {
 
 	background-color: #ddd;
 	color: var(--border-black);
+	cursor: pointer;
+}
+
+.button-close a {
+	cursor: pointer;
 }
 
 .input-group {
@@ -210,14 +233,14 @@ img {
 }
 
 /* responsive ============================================ */
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1024px) {
 	button {
 		width: 80%;
 	}
 
 	/* background mosaico */
 
-	#background-bottom {
+	div#background-bottom {
 		padding: relative;
 		bottom: 0;
 	}

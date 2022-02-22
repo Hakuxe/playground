@@ -19,7 +19,7 @@
 
 		<div class="container">
 			<main class="countdown-container">
-				<h1>READY TO LAUNCH IN...</h1>
+				<h1>Lançamento em...</h1>
 
 				<div class="countdown">
 					<div>
@@ -47,7 +47,7 @@
 				</div>
 
 				<p>inscreva-se para saber mais sobre o lançamento</p>
-				<button class="primary-button">Inscreva-se</button>
+				<button class="primary-button" onclick="MODAL.toggle()">Inscreva-se</button>
 			</main>
 
 			<section class="container-image">
@@ -59,10 +59,10 @@
 			</section>
 		</div>
 
-		<div class="modal-overlay active">
+		<div class="modal-overlay inactive">
 			<div class="modal-container">
 				<form action="">
-					<div class="button-close">
+					<div class="button-close" onclick="MODAL.toggle()">
 						<a class="close-modal">X</a>
 					</div>
 					<fieldset class="input-group">
@@ -84,7 +84,7 @@
 						/>
 					</fieldset>
 					<div class="input-group">
-						<button class="button-modal primary-button ">Inscrever-se</button>
+						<button class="button-modal primary-button" >Inscrever-se</button>
 					</div>
 				</form>
 			</div>

@@ -21,6 +21,14 @@ const CLOCKFUNCTIONS = {
 	},
 };
 
+const MODAL = {
+	modal: document.querySelector('.modal-overlay'),
+	toggle(){
+		console.log("chegou aki", this.modal)
+		this.modal.classList.toggle('inactive');
+	},
+}
+
 function updateInnerHtmlById(elementId, content) {
 	const element = document.getElementById(elementId);
 	if (!element) {
@@ -64,3 +72,4 @@ function countDownTimer() {
 // contagem regressiva
 
 setInterval(countDownTimer, 1000);
+
