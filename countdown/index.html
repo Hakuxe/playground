@@ -17,21 +17,20 @@
 		<!-- <img id="background-top"src="./assets/top-image.svg" alt="" /> -->
 		<div id="background-top"></div>
 
-
 		<div class="container">
 			<main class="countdown-container">
 				<h1>READY TO LAUNCH IN...</h1>
 
 				<div class="countdown">
-					<div >
-						<h4 >Dias</h4>
+					<div>
+						<h4>Dias</h4>
 						<h2 class="clock-number" id="days">22</h2>
 					</div>
 					<span class="separator">:</span>
 
 					<div class="box-hours">
 						<h4>Horas</h4>
-						<h2 id="hours"  class="clock-number">10</h2>
+						<h2 id="hours" class="clock-number">10</h2>
 					</div>
 					<span class="separator">:</span>
 
@@ -48,7 +47,7 @@
 				</div>
 
 				<p>inscreva-se para saber mais sobre o lançamento</p>
-				<button>Inscreva-se</button>
+				<button class="primary-button">Inscreva-se</button>
 			</main>
 
 			<section class="container-image">
@@ -60,9 +59,38 @@
 			</section>
 		</div>
 
-		
-		<div id="background-bottom"></div>
+		<div class="modal-overlay active">
+			<div class="modal-container">
+				<form action="">
+					<div class="button-close">
+						<a class="close-modal">X</a>
+					</div>
+					<fieldset class="input-group">
+						<label for="name">Nome:</label>
+						<input
+							type="text"
+							id="name"
+							name="name"
+							placeholder="Digite seu nome"
+						/>
+					</fieldset>
+					<fieldset class="input-group">
+						<label for="email">E-mail</label>
+						<input
+							type="email"
+							id="email"
+							name="email"
+							placeholder="ex: rodrigo.marques@gmail.com"
+						/>
+					</fieldset>
+					<div class="input-group">
+						<button class="button-modal primary-button ">Inscrever-se</button>
+					</div>
+				</form>
+			</div>
+		</div>
 
+		<div id="background-bottom"></div>
 
 		<script src="scripts.js"></script>
 	</body>
