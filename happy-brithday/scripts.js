@@ -1,5 +1,5 @@
 // const eventDate = new Date("Feb 24, 2022 12:37:25");
-const eventDate = new Date();
+// const eventDate = new Date();
 
 
 const UTILS = {
@@ -25,6 +25,8 @@ const MODAL = {
 };
 
 const CLOCKFUNCTIONS = {
+	eventDate: new Date(),
+
 	mountCountDownDate(valueInMillesecons){
 		let parts ={
 			days 	: UTILS.formatTwoDigits(Math.floor(valueInMillesecons / (1000 * 60 * 60 * 24))),
@@ -37,7 +39,18 @@ const CLOCKFUNCTIONS = {
 	
 	setEventDate(date) {
 		//seta o event date para a data do form
-		console.log('date :>> ', typeof date);
+		console.log('date :>> ', date);
+		console.log('date :>> ', date.split("-"));
+		CLOCKFUNCTIONS.eventDate = new Date(date.split("-"))
+		
+	},
+	
+	startClock(){
+		return setInterval(CLOCKFUNCTIONS.countDownTimer, 1000);
+	},
+
+	stopClock(inverval){
+		clearInterval(inverval);
 	},
 
 	countDownTimer() {
@@ -45,7 +58,8 @@ const CLOCKFUNCTIONS = {
 		let   dateParts = { days:0, hours:0, minutes:0, seconds:0 } 
 
 		// verificar a diferenca entre o tempo atual e event
-		let timeRemaining = Number(eventDate) - currentTime;
+		let timeRemaining = Number(CLOCKFUNCTIONS.eventDate) - currentTime;
+		
 
 		// fazer o calculo dos dias,horas minutos e segundos
 		if (timeRemaining > 0) {
@@ -70,10 +84,10 @@ const CLOCKFUNCTIONS = {
 			UTILS.updateInnerHtmlById("hours", 	 UTILS.formatTwoDigits(dateParts.hours));
 			UTILS.updateInnerHtmlById("minutes", UTILS.formatTwoDigits(dateParts.minutes));
 			UTILS.updateInnerHtmlById("seconds", UTILS.formatTwoDigits(dateParts.seconds));
+
 			
-		
-			clearInterval(timeControl);
 		}
+		console.log('object :>> ');
 	},
 };
 
@@ -99,11 +113,22 @@ const FORM = {
 		//setar o countdown para a data passada
 		CLOCKFUNCTIONS.setEventDate(birthday);
 
-		// se não tiver data manter 00:00:00
+		//chamar o set inverval e iniciar o clock
+		 const timeControl = CLOCKFUNCTIONS.startClock();
+		
+
+		//TODO:  como parar o interval ????
+
 
 		//resetando o form após enviar
 		this.form.reset();
+		MODAL.toggle();
 	},
 };
 
-const timeControl = setInterval(CLOCKFUNCTIONS.countDownTimer, 1000);
+
+console.log('object :>> ');
+
+
+
+
