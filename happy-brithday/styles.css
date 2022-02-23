@@ -1,0 +1,205 @@
+
+/* main content +======================================= */
+.countdown-container {
+	width: 50%;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.countdown-container h1 {
+	font-weight: bold;
+	font-size: 2.25rem;
+	letter-spacing: 3px;
+
+	color: var(--purple);
+
+	margin-top: 1.5rem;
+}
+
+.countdown-container p {
+	margin-top: 0.8rem;
+	color: var(--light-text-color);
+}
+
+/* countdown clock ======================================  */
+
+.countdown {
+	display: flex;
+	align-items: center;
+
+	margin-top: 1.25rem;
+}
+
+.countdown div {
+	margin: 1rem;
+	text-align: center;
+}
+
+.countdown h4 {
+	color: var(--light-text-color);
+	font-weight: normal;
+	text-align: center;
+}
+
+.countdown .clock-number {
+	color: var(--gray-700);
+	width: 7rem;
+
+	font-size: 6rem;
+	font-weight: normal;
+}
+
+.countdown .separator {
+	font-size: 4rem;
+	margin-top: 1rem;
+	position: re;
+}
+
+
+
+/* modal ================================= */
+
+.modal-overlay {
+	background-color: rgba(0, 0, 0, 0.5);
+
+	width: 100%;
+	height: 100%;
+
+	position: fixed;
+	top: 0;
+	z-index: 1;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.modal-container {
+	background-color: var(--background-modal);
+
+	width: 740px;
+
+	padding: 1rem;
+	border-radius: 0.5rem;
+}
+
+.modal-container form {
+	display: flex;
+	flex-direction: column;
+}
+
+.button-close {
+	position: absolute;
+	margin: -1.8rem;
+
+	align-self: flex-end;
+	padding: 0.5rem 1rem;
+
+	border-radius: 50%;
+
+	background-color: #ddd;
+	color: var(--border-black);
+	cursor: pointer;
+}
+
+.button-close a {
+	cursor: pointer;
+}
+
+.input-group {
+	padding: 1rem;
+	border: none;
+}
+
+.input-group label {
+	color: var(--border-black);
+}
+
+.input-group input {
+	width: 100%;
+
+	padding: 1rem;
+	margin-top: 0.8rem;
+
+	border-radius: 0.25rem;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.button-modal {
+	opacity: 1;
+	width: 100%;
+
+	margin-top: 1rem;
+}
+
+/* container image rocket ================================= */
+.container-image {
+	width: 50%;
+	margin-top: 1.5rem;
+}
+
+/* responsive ============================================ */
+@media screen and (max-width: 1024px) {
+	button {
+		width: 80%;
+	}
+
+	/* main content +======================================= */
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.countdown-container {
+		width: 100%;
+		text-align: center;
+	}
+
+	.countdown div {
+		margin: 0.5rem;
+		text-align: center;
+	}
+
+	.countdown h4 {
+		font-size: 1rem;
+	}
+
+	.countdown .separator {
+		font-size: 2rem;
+		margin-top: 1rem;
+		position: re;
+	}
+
+	.countdown .clock-number {
+		color: var(--gray-700);
+		width: initial;
+		font-size: 2.5rem;
+		font-weight: normal;
+	}
+
+	/* container image rocket ================================= */
+
+	.modal-container {
+		width: 92%;
+	}
+
+	.button-modal {
+		opacity: 1;
+		width: 100%;
+
+		margin-top: 1rem;
+	}
+
+	/* container image rocket +======================================= */
+
+	.container-image {
+		margin: 2rem;
+		width: 80%;
+	}
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Counstdown</title>
+		<link rel="stylesheet" href="./global/global.css" />
+		<link rel="stylesheet" href="./global/utils.css" />
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+
+		<div class="container">
+			<main class="countdown-container">
+				<h1>Seu aniversário é em...</h1>
+
+				<div class="countdown">
+					<div>
+						<h4>Dias</h4>
+						<h2 class="clock-number" id="days">22</h2>
+					</div>
+					<span class="separator">:</span>
+
+					<div class="box-hours">
+						<h4>Horas</h4>
+						<h2 id="hours" class="clock-number">10</h2>
+					</div>
+					<span class="separator">:</span>
+
+					<div class="box-minutes">
+						<h4>Minutos</h4>
+						<h2 id="minutes" class="clock-number">22</h2>
+					</div>
+					<span class="separator">:</span>
+
+					<div>
+						<h4>Segundos</h4>
+						<h2 id="seconds" class="clock-number">22</h2>
+					</div>
+				</div>
+
+				<p>Estamos preparando tudo para a grande festa </p>
+				<button class="primary-button" onclick="MODAL.toggle()">Trocar data</button>
+			</main>
+
+			<section class="container-image">
+				<img
+					src="./assets/undraw_birthday_girl_n46w.svg"
+					alt="bolo de aniversário"
+				/>
+			</section>
+		</div>
+
+		<div class="modal-overlay ">
+			<div class="modal-container">
+				<form action="" onsubmit="FORM.onSubmit(event)">
+					<div class="button-close" onclick="MODAL.toggle()">
+						<a class="close-modal">X</a>
+					</div>
+					<fieldset class="input-group">
+						<label for="name">Nome:</label>
+						<input
+							type="text"
+							id="name"
+							name="name"
+							placeholder="Digite seu nome"
+						/>
+					</fieldset>
+					<fieldset class="input-group">
+						<label for="birthday">Data de nascimento:</label>
+						<input
+							type="date"
+							id="birthday"
+							name="birthday"
+						/>
+					</fieldset>
+					<div class="input-group">
+						<button class="button-modal primary-button" >Selecionar data</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+
+		<script src="scripts.js"></script>
+	</body>
+</html>
