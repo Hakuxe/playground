@@ -2,6 +2,7 @@
 // const eventDate = new Date();
 
 
+
 const UTILS = {
 	formatTwoDigits(n) {
 		return (n < 10 ? "0" : "") + n;
@@ -26,74 +27,78 @@ const MODAL = {
 
 const CLOCKFUNCTIONS = {
 	eventDate: new Date(),
+	idInterval: 0,
 
-	mountCountDownDate(valueInMillesecons){
-		let parts ={
-			days 	: UTILS.formatTwoDigits(Math.floor(valueInMillesecons / (1000 * 60 * 60 * 24))),
-			hours 	: UTILS.formatTwoDigits(Math.floor((valueInMillesecons / (1000 * 60 * 60)) % 24)),
-			minutes : UTILS.formatTwoDigits(Math.floor((valueInMillesecons / 1000 / 60) % 60)),
-			seconds : UTILS.formatTwoDigits(Math.floor((valueInMillesecons / 1000) % 60)),
-		}
+	mountCountDownDate(valueInMillesecons) {
+		let parts = {
+			days: UTILS.formatTwoDigits(
+				Math.floor(valueInMillesecons / (1000 * 60 * 60 * 24))
+			),
+			hours: UTILS.formatTwoDigits(
+				Math.floor((valueInMillesecons / (1000 * 60 * 60)) % 24)
+			),
+			minutes: UTILS.formatTwoDigits(
+				Math.floor((valueInMillesecons / 1000 / 60) % 60)
+			),
+			seconds: UTILS.formatTwoDigits(
+				Math.floor((valueInMillesecons / 1000) % 60)
+			),
+		};
 		return parts;
 	},
-	
+
 	setEventDate(date) {
 		//seta o event date para a data do form
-		console.log('date :>> ', date);
-		console.log('date :>> ', date.split("-"));
-		CLOCKFUNCTIONS.eventDate = new Date(date.split("-"))
-		
-	},
-	
-	startClock(){
-		return setInterval(CLOCKFUNCTIONS.countDownTimer, 1000);
-	},
-
-	stopClock(inverval){
-		clearInterval(inverval);
+		CLOCKFUNCTIONS.eventDate = new Date(date.split("-"));
 	},
 
 	countDownTimer() {
 		const currentTime = new Date();
-		let   dateParts = { days:0, hours:0, minutes:0, seconds:0 } 
+		let dateParts = { days: 0, hours: 0, minutes: 0, seconds: 0 };
 
-		// verificar a diferenca entre o tempo atual e event
 		let timeRemaining = Number(CLOCKFUNCTIONS.eventDate) - currentTime;
-		
 
-		// fazer o calculo dos dias,horas minutos e segundos
 		if (timeRemaining > 0) {
-	
 			dateParts = CLOCKFUNCTIONS.mountCountDownDate(timeRemaining);
 
-			//atualizar o html
-			UTILS.updateInnerHtmlById("days", 	 dateParts.days);
-			UTILS.updateInnerHtmlById("hours", 	 dateParts.hours);
+			
+			//TODO : melhorar a atualização do html
+			
+			UTILS.updateInnerHtmlById("days", dateParts.days);
+			UTILS.updateInnerHtmlById("hours", dateParts.hours);
 			UTILS.updateInnerHtmlById("minutes", dateParts.minutes);
 			UTILS.updateInnerHtmlById("seconds", dateParts.seconds);
-
-			
 		}
 
-		//verificar se o tempo acabou pra sair do coutdown
+		
 		if (timeRemaining < 0) {
-			//exibe algo
 
 			//atualizar o html
-			UTILS.updateInnerHtmlById("days", 	 UTILS.formatTwoDigits(dateParts.days));
-			UTILS.updateInnerHtmlById("hours", 	 UTILS.formatTwoDigits(dateParts.hours));
-			UTILS.updateInnerHtmlById("minutes", UTILS.formatTwoDigits(dateParts.minutes));
-			UTILS.updateInnerHtmlById("seconds", UTILS.formatTwoDigits(dateParts.seconds));
+			UTILS.updateInnerHtmlById("days",UTILS.formatTwoDigits(dateParts.days));
+			UTILS.updateInnerHtmlById("hours",UTILS.formatTwoDigits(dateParts.hours));
+			UTILS.updateInnerHtmlById("minutes",UTILS.formatTwoDigits(dateParts.minutes));
+			UTILS.updateInnerHtmlById("seconds",UTILS.formatTwoDigits(dateParts.seconds));
 
-			
+			//parar o setInverval
+			CLOCKFUNCTIONS.stopCountDown(CLOCKFUNCTIONS.idInterval);
+
 		}
-		console.log('object :>> ');
+	},
+
+	startCountDown() {
+		
+		// iniciar o timer
+		return setInterval(() => {
+			CLOCKFUNCTIONS.countDownTimer()
+		}, 1000);
+
+		// return setInterval(CLOCKFUNCTIONS.countDownTimer(), 1000);
+	},
+
+	stopCountDown(idInterval) {
+		clearInterval(idInterval)
 	},
 };
-
-
-
-
 
 const FORM = {
 	form: document.querySelector("form"),
@@ -108,16 +113,17 @@ const FORM = {
 		event.preventDefault();
 
 		//pegando os valores enviados no form
-		let { name, birthday } =this.getValues();
+		let { name, birthday } = this.getValues();
 
-		//setar o countdown para a data passada
+		
 		CLOCKFUNCTIONS.setEventDate(birthday);
 
-		//chamar o set inverval e iniciar o clock
-		 const timeControl = CLOCKFUNCTIONS.startClock();
-		
+		//ṕara qualquer intevalo existente (caso troca de data)
+		CLOCKFUNCTIONS.stopCountDown(CLOCKFUNCTIONS.idInterval);
 
-		//TODO:  como parar o interval ????
+		//chamar o set inverval e iniciar o clock
+		CLOCKFUNCTIONS.idInterval = CLOCKFUNCTIONS.startCountDown();
+		
 
 
 		//resetando o form após enviar
@@ -125,10 +131,5 @@ const FORM = {
 		MODAL.toggle();
 	},
 };
-
-
-console.log('object :>> ');
-
-
 
 
