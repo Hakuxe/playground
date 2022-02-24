@@ -59,6 +59,17 @@
 }
 
 
+/* celebration mode ======================================  */
+
+.celebration-title{
+	color: var(--gray-700);
+	text-align: center;
+
+	font-size: 5rem;
+	font-weight: normal;
+}
+
+
 
 /* modal ================================= */
 
@@ -182,6 +193,14 @@
 		font-size: 2.5rem;
 		font-weight: normal;
 	}
+
+
+	/* celebration mode ======================================  */
+
+	.celebration-title{
+		font-size: 3rem;
+	}
+
 
 	/* container image rocket ================================= */
 

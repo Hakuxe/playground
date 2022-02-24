@@ -28,5 +28,21 @@
 
 }
 
+.invisible{
+	width: 0;
+	height: 0;
+	margin: 0;
+	padding: 0;
 
+	opacity: 0;
+	display: inline-block;
+}
+
+.mode-celebration.primary-button {
+	background-color: var(--pink);
+}
+
+.mode-celebration.title{
+	color: var(--pink);
+}
 
