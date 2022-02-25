@@ -1,0 +1,70 @@
+/* responsive ============================================ */
+@media screen and (max-width: 1024px) {
+	button {
+		width: 80%;
+	}
+
+	/* main content +======================================= */
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.countdown-container {
+		width: 100%;
+		text-align: center;
+	}
+
+	.countdown div {
+		margin: 0.5rem;
+		text-align: center;
+	}
+
+	.countdown h4 {
+		font-size: 1rem;
+	}
+
+	.countdown .separator {
+		font-size: 2rem;
+		margin-top: 1rem;
+		position: re;
+	}
+
+	.countdown .clock-number {
+		color: var(--gray-700);
+		width: initial;
+		font-size: 2.5rem;
+		font-weight: normal;
+	}
+
+
+	/* celebration mode ======================================  */
+
+	.celebration-title{
+		font-size: 3rem;
+	}
+
+
+	/* container image rocket ================================= */
+
+	.modal-container {
+		width: 92%;
+	}
+
+	.button-modal {
+		opacity: 1;
+		width: 100%;
+
+		margin-top: 1rem;
+	}
+
+	/* container image rocket +======================================= */
+
+	.container-image {
+		margin: 2rem;
+		width: 80%;
+	}
+}
