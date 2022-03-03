@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>inputs</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div id="preview">
+			<input type="file" accept="image/*" onchange="handlePreview(event)" />
+			<img
+				id="previewImg"
+				src=""
+				alt="selecione uma imagem para o preview"
+			/>
+		</div>
+
+		<div>
+			<input id="colors" type="color" onchange="handleColors(event)" />
+			<p>Texto que muda de cor</p>
+		</div>
+
+		<div>
+			<form action="">
+				<input type="text" />
+				<input type="reset" />
+			</form>
+		</div>
+
+		<div>
+			<input type="image" src="" alt="input type image" />
+		</div>
+	</body>
+
+	<script src="./app.js"></script>
+</html>
