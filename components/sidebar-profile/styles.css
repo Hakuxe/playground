@@ -1,0 +1,60 @@
+:root {
+	--body-bg-color: #dce4e3;
+	--text-color: #084236;
+
+	--green: #18c29c;
+	--light-green: #8ed7c6;
+
+	--light-grey: #dce4e3;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: "Poppings", Arial, Helvetica, sans-serif;
+}
+
+/* sidebar closed +=============================================== */
+
+.sidebar {
+	background-color: var(--light-green);
+
+	height: 100vh;
+	width: max-content;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.sidebar .menu {
+	list-style-type: none;
+	margin-top: 1rem;
+
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	width: 100%;
+}
+
+.sidebar .menu li {
+	cursor: pointer;
+
+	padding: 0 1.5rem;
+}
+
+.log-out {
+	background-color: var(--light-grey);
+	text-align: center;
+
+	width: 100%;
+	padding: 1rem;
+}
+
+/* sidebar open +=============================================== */
+p, span{display: none;}
