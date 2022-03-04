@@ -21,7 +21,7 @@ html {
 /* sidebar closed +=============================================== */
 
 .sidebar {
-	background-color: var(--light-green);
+	background-color: var(--green);
 
 	height: 100vh;
 	width: max-content;
@@ -33,28 +33,80 @@ html {
 }
 
 .sidebar .menu {
+	padding: 0 0.5rem;
 	list-style-type: none;
 	margin-top: 1rem;
 
+	width: 100%;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	gap: 1.5rem;
-	width: 100%;
 }
 
 .sidebar .menu li {
 	cursor: pointer;
+	text-align: center;
+}
 
-	padding: 0 1.5rem;
+#search-button #search {
+	border: none;
+	border-radius: 0.75rem;
+
+	background-color: var(--light-green);
+	background-image: url("./assets/search.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-position-x: 10px;
+
+	height: 3rem;
+	width: 3rem;
+
+	/* transform: translateX(-10px); */
 }
 
 .log-out {
-	background-color: var(--light-grey);
+	background-color: var(--light-green);
 	text-align: center;
 
 	width: 100%;
 	padding: 1rem;
 }
 
+p, span, #profile-picture {
+	display: none;
+}
+
+
+
 /* sidebar open +=============================================== */
-p, span{display: none;}
+.sidebar.open {
+	width: 245px;
+}
+
+.open p,
+.open span,
+.open #profile-picture{
+	display: unset;
+}
+
+.open .log-out{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.open #profile-container{
+	/* TODO : ordernar os elementos na div log out  */
+}
+
+.open #profile-picture{
+	border-radius: 0.5rem;
+
+	width: 45px;
+	height: 45px;
+	object-fit: cover;
+}
+
+
+
