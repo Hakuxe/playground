@@ -33,7 +33,6 @@ html {
 }
 
 .sidebar .menu {
-	padding: 0 0.5rem;
 	list-style-type: none;
 	margin-top: 1rem;
 
@@ -49,22 +48,6 @@ html {
 	text-align: center;
 }
 
-#search-button #search {
-	border: none;
-	border-radius: 0.75rem;
-
-	background-color: var(--light-green);
-	background-image: url("./assets/search.svg");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-position-x: 10px;
-
-	height: 3rem;
-	width: 3rem;
-
-	/* transform: translateX(-10px); */
-}
-
 .log-out {
 	background-color: var(--light-green);
 	text-align: center;
@@ -73,7 +56,7 @@ html {
 	padding: 1rem;
 }
 
-p, span, #profile-picture {
+p, span, #profile-picture, #logo, #search  {
 	display: none;
 }
 
@@ -86,9 +69,64 @@ p, span, #profile-picture {
 
 .open p,
 .open span,
+.open #logo,
+.open #search ,
 .open #profile-picture{
 	display: unset;
 }
+
+.sidebar.open .menu {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	
+}
+
+.sidebar.open .menu li{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	
+}
+
+/* .sidebar.open .menu li:first-child{
+	width: 100%;
+} */
+
+.sidebar.open .menu li span{
+	text-transform: capitalize;
+	margin-left: 1rem;
+}
+
+.sidebar.open header{
+	margin-top: 1rem;
+}
+
+.sidebar.open #logo-menu{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 1rem;
+}
+
+.sidebar.open  #search-button #search{
+	height: 3rem;
+	transform: translateX(-10px);
+	width: 105%;
+	
+
+	border: none;
+	border-radius: 0.75rem;
+
+	background-color: var(--light-green);
+	background-image: url("./assets/search.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-position-x: 10px;
+
+	
+}
+
 
 .open .log-out{
 	display: flex;
@@ -97,7 +135,8 @@ p, span, #profile-picture {
 }
 
 .open #profile-container{
-	/* TODO : ordernar os elementos na div log out  */
+	display: flex;
+	gap:0.8rem ;
 }
 
 .open #profile-picture{
@@ -107,6 +146,12 @@ p, span, #profile-picture {
 	height: 45px;
 	object-fit: cover;
 }
+
+.open #profile-container div{
+	text-align: left;
+	
+}
+
 
 
 
