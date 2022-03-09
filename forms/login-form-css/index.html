@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="assets/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap"
+			rel="stylesheet"
+		/>
+
+		<title>Login</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<section id="container">
+			<img src="./assets/logo.svg" alt="" />
+			<div class="header-form">
+				<h2 class="title-form">
+					<img src="./assets/log-in.svg" alt="" />
+					Faça seu login
+				</h2>
+				<p>Entre com suas informações de cadastro.</p>
+			</div>
+
+			<form action="">
+				<fieldset class="input-group">
+					<label for="email">E-mail</label>
+					<input
+                  id="email"
+                  class="input-focus"
+						type="email"
+						name="email"
+						placeholder="Digite seu e-mail"
+					/>
+				</fieldset>
+				<fieldset class="input-group">
+					<label for="passsword">Senha</label>
+					<div id="password-input-container">
+						<input
+                     id="password"
+                     class="input-focus"
+							type="password"
+							name="password"
+							placeholder="Digite sua senha"
+						/>
+						<img src="./assets/eye.svg" alt="" />
+					</div>
+				</fieldset>
+				<fieldset class="input-group help-login">
+					<div class="checkbox-container">
+						<input type="checkbox" id="remember" />
+						<label for="remember">Lembre-me</label>
+					</div>
+					<a>Esqueci minha senha</a>
+				</fieldset>
+
+				<fieldset class="input-group sei-la">
+					<button class="primary-btn">entrar</button>
+					<span> Não tem uma conta? <a>Registre-se</a></span>
+				</fieldset>
+			</form>
+		</section>
+
+		<script type="module" src="/main.js"></script>
+	</body>
+</html>

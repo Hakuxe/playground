@@ -1,0 +1,213 @@
+:root {
+   --primary-color: #ffc632;
+   --text-base: #afb6c2;
+   --text-title: #d4ccb6;
+
+   --background: #191816;
+   --form-background: #24221f;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+
+   font-family: "Roboto", sans-serif;
+}
+
+/* utils =================================== */
+.primary-btn {
+  
+   padding: 0.75rem 1.5rem;
+   border-radius: 0.25rem;
+   border: none;
+
+   background: var(--primary-color);
+   color: #473404;
+
+   text-transform: uppercase;
+   font-family: "Poppins", sans-serif;
+   font-weight: 600;
+   font-size: 1.125rem;
+}
+
+
+/* form ===================================================================*/
+#container {
+   height: 100vh;
+   padding: 2rem 1rem;
+
+   background-color: var(--background);
+   color: var(--text-base);
+}
+
+.header-form {
+   margin: 2rem 0;
+}
+
+.title-form {
+   color: var(--text-title);
+   font-family: "Poppins", sans-serif;
+   font-weight: 600;
+
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
+   margin-bottom: 5px;
+}
+
+/* form input fields =================================================== */
+.input-group {
+   border: none;
+   margin-top: 1.25rem;
+
+   display: flex;
+   flex-direction: column;
+   gap: 0.3125rem;
+}
+
+.input-group label {
+   font-weight: 500;
+   font-family: "Poppins", sans-serif;
+}
+
+.input-group input {
+   height: 2.75rem;
+   width: 100%;
+
+   background-color: var(--background);
+   color: var(--text-base);
+
+   border: #86868680 1px solid;
+   border-radius: 0.25rem;
+   padding-left: 3rem ;
+}
+
+
+.input-group .input-focus:focus {
+   outline: 0 none;
+   border-color: var(--primary-color);
+   box-shadow: 0px 0px 0px 2px #ffde88;
+}
+
+.input-group input#email {
+   background-image: url("./assets/mail.svg");
+   background-repeat: no-repeat;
+   background-position: center left;
+   background-position-x: 0.75rem;
+}
+
+.input-group input#email:focus {
+   background-image: url("./assets/mail-focus.svg");
+   background-repeat: no-repeat;
+   background-position: center left;
+   background-position-x: 0.75rem;
+}
+
+.input-group input#password {
+   background-image: url("./assets/lock.svg");
+   background-repeat: no-repeat;
+   background-position: center left;
+   background-position-x: 0.75rem;
+}
+
+.input-group input#password:focus {
+   background-image: url("./assets/lock-focus.svg");
+   background-repeat: no-repeat;
+   background-position: center left;
+   background-position-x: 0.75rem;
+}
+
+#password-input-container img{
+   /* position: absolute;
+   right: 2rem;
+   top:42.75%; */
+
+   position: absolute;
+   width: 1.25rem;
+   height: 1.25rem;
+   left: 313px;
+   top: 323px;
+
+   cursor: pointer;
+}
+
+.input-group.help-login {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.input-group .checkbox-container{
+   display: flex;
+   align-items: center;
+}
+
+.input-group .checkbox-container #remember {
+  -moz-appearance: none;
+  height: 1.25rem;
+  width: 1.25rem;
+
+  margin-right: 0.5rem;
+  padding-left: 0;
+
+  background-color: var(--background)  ;
+}
+
+.input-group .checkbox-container #remember:checked {
+
+  background-color: var(--primary-color);
+  background-image: url('./assets/check.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  
+}
+
+
+.input-group .checkbox-container label {
+   font-weight: 400;
+   font-family: "Poppins", sans-serif;
+}
+
+.input-group a {
+   line-height: 1.25rem;
+   font-size: 0.875rem;
+   font-weight: 600;
+   font-family: "Poppins", sans-serif;
+
+   color: var(--primary-color);
+   cursor: pointer;
+}
+
+.input-group span {
+   line-height: 1.25rem;
+   font-size: 0.875rem;
+
+   font-weight: 400;
+   font-family: "Poppins", sans-serif;
+   color: var(--primary-color);
+   cursor: pointer;
+}
+
+
+
+.input-group.sei-la{
+   text-align: center;
+}
+
+
+.input-group.sei-la span{
+   margin-top: 1rem;
+}
+
+
+
+
+/* TODO : adaptar estilos para telas maiores*/
+
+
+
+
+
