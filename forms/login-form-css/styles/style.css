@@ -1,39 +1,6 @@
-:root {
-   --primary-color: #ffc632;
-   --text-base: #afb6c2;
-   --text-title: #d4ccb6;
-
-   --background: #191816;
-   --form-background: #24221f;
-}
-
-* {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-
-   font-family: "Roboto", sans-serif;
-}
-
-/* utils =================================== */
-.primary-btn {
-  
-   padding: 0.75rem 1.5rem;
-   border-radius: 0.25rem;
-   border: none;
-
-   background: var(--primary-color);
-   color: #473404;
-
-   text-transform: uppercase;
-   font-family: "Poppins", sans-serif;
-   font-weight: 600;
-   font-size: 1.125rem;
-}
-
 
 /* form ===================================================================*/
-#container {
+#content {
    height: 100vh;
    padding: 2rem 1rem;
 
@@ -91,43 +58,43 @@
 }
 
 .input-group input#email {
-   background-image: url("./assets/mail.svg");
+   background-image: url("../assets/mail.svg");
    background-repeat: no-repeat;
    background-position: center left;
    background-position-x: 0.75rem;
 }
 
 .input-group input#email:focus {
-   background-image: url("./assets/mail-focus.svg");
+   background-image: url("../assets/mail-focus.svg");
    background-repeat: no-repeat;
    background-position: center left;
    background-position-x: 0.75rem;
 }
 
 .input-group input#password {
-   background-image: url("./assets/lock.svg");
+   background-image: url("../assets/lock.svg");
    background-repeat: no-repeat;
    background-position: center left;
    background-position-x: 0.75rem;
 }
 
 .input-group input#password:focus {
-   background-image: url("./assets/lock-focus.svg");
+   background-image: url("../assets/lock-focus.svg");
    background-repeat: no-repeat;
    background-position: center left;
    background-position-x: 0.75rem;
 }
 
 #password-input-container img{
-   /* position: absolute;
-   right: 2rem;
-   top:42.75%; */
+   
+
+   /* TODO: ajeitar posição do botão de mostrar senha */
 
    position: absolute;
    width: 1.25rem;
    height: 1.25rem;
-   left: 313px;
-   top: 323px;
+   left: 39%;
+   top: 59%;
 
    cursor: pointer;
 }
@@ -193,19 +160,16 @@
 
 
 
-.input-group.sei-la{
+.input-group.login-action{
    text-align: center;
 }
 
 
-.input-group.sei-la span{
+.input-group.login-action span{
    margin-top: 1rem;
 }
 
 
-
-
-/* TODO : adaptar estilos para telas maiores*/
 
 
 

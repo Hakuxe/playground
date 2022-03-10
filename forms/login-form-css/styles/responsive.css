@@ -1,0 +1,81 @@
+
+
+/* 
+    320px — 480px: Mobile devices
+    481px — 768px: iPads, Tablets
+    769px — 1024px: Small screens, laptops
+    1025px — 1200px: Desktops, large screens
+    1201px and more —  Extra large screens, TV
+*/
+
+@media (min-width:768px) {
+
+    #content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #content #logo{
+        align-self: flex-start;
+    }
+
+
+    form{
+        margin-top: 4rem;
+        width: 80%;
+        padding: 4rem 4rem ;
+        background-color: var(--form-background);
+    }
+}
+
+
+@media (min-width:1024px) {
+    
+    #container{
+        display: grid;
+      
+        grid-template-columns: 50% 50%;
+        height: 100vh;
+    }
+
+    #content{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+    }
+
+    #content #logo{
+        align-self: flex-start;
+    }
+
+
+    form{
+        width: 80%;
+        margin: auto;
+        padding: 1rem 4rem ;
+        background-color: var(--form-background);
+       
+    }
+
+    #side-image{
+        background-image: url('../assets/side-image.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        
+    }
+    
+}
+
+
+@media (min-width:1378px) {
+    
+    form{
+        width: 80%;
+        background-color: var(--form-background);
+        margin: auto;
+        padding: 5rem 5rem ;
+       
+    }
+}

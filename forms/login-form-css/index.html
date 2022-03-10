@@ -12,58 +12,65 @@
 		/>
 
 		<title>Login</title>
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="./styles/global.css" />
+		<link rel="stylesheet" href="./styles/style.css" />
+		<link rel="stylesheet" href="./styles/responsive.css" />
 	</head>
 	<body>
-		<section id="container">
-			<img src="./assets/logo.svg" alt="" />
-			<div class="header-form">
-				<h2 class="title-form">
-					<img src="./assets/log-in.svg" alt="" />
-					Faça seu login
-				</h2>
-				<p>Entre com suas informações de cadastro.</p>
-			</div>
+		<div id="container">
+			<main id="content">
+				<img id="logo" src="./assets/logo.svg" alt="" />
 
-			<form action="">
-				<fieldset class="input-group">
-					<label for="email">E-mail</label>
-					<input
-                  id="email"
-                  class="input-focus"
-						type="email"
-						name="email"
-						placeholder="Digite seu e-mail"
-					/>
-				</fieldset>
-				<fieldset class="input-group">
-					<label for="passsword">Senha</label>
-					<div id="password-input-container">
+				<form action="">
+					<div class="header-form">
+						<h2 class="title-form">
+							<img src="./assets/log-in.svg" alt="" />
+							Faça seu login
+						</h2>
+						<p>Entre com suas informações de cadastro.</p>
+					</div>
+
+					<fieldset class="input-group">
+						<label for="email">E-mail</label>
 						<input
-                     id="password"
-                     class="input-focus"
-							type="password"
-							name="password"
-							placeholder="Digite sua senha"
+							id="email"
+							class="input-focus"
+							type="email"
+							name="email"
+							placeholder="Digite seu e-mail"
 						/>
-						<img src="./assets/eye.svg" alt="" />
-					</div>
-				</fieldset>
-				<fieldset class="input-group help-login">
-					<div class="checkbox-container">
-						<input type="checkbox" id="remember" />
-						<label for="remember">Lembre-me</label>
-					</div>
-					<a>Esqueci minha senha</a>
-				</fieldset>
+					</fieldset>
+					<fieldset class="input-group">
+						<label for="passsword">Senha</label>
+						<div id="password-input-container">
+							<input
+								id="password"
+								class="input-focus"
+								type="password"
+								name="password"
+								placeholder="Digite sua senha"
+							/>
+							<img src="./assets/eye.svg" alt="" />
+						</div>
+					</fieldset>
+					<fieldset class="input-group help-login">
+						<div class="checkbox-container">
+							<input type="checkbox" id="remember" />
+							<label for="remember">Lembre-me</label>
+						</div>
+						<a>Esqueci minha senha</a>
+					</fieldset>
 
-				<fieldset class="input-group sei-la">
-					<button class="primary-btn">entrar</button>
-					<span> Não tem uma conta? <a>Registre-se</a></span>
-				</fieldset>
-			</form>
-		</section>
-
+					<fieldset class="input-group login-action">
+						<button class="primary-btn">entrar</button>
+						<span> Não tem uma conta? <a>Registre-se</a></span>
+					</fieldset>
+				</form>
+			</main>
+			<section id="side-image">
+				<!-- <img src="./assets/side-image.jpg" alt="" /> -->
+			</section>
+		</div>
 		<script type="module" src="/main.js"></script>
 	</body>
 </html>

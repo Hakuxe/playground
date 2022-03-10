@@ -1,0 +1,31 @@
+:root {
+	--primary-color: #ffc632;
+	--text-base: #afb6c2;
+	--text-title: #d4ccb6;
+
+	--background: #191816;
+	--form-background: #24221f;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	font-family: "Roboto", sans-serif;
+}
+
+/* utils =================================== */
+.primary-btn {
+	padding: 0.75rem 1.5rem;
+	border-radius: 0.25rem;
+	border: none;
+
+	background: var(--primary-color);
+	color: #473404;
+
+	text-transform: uppercase;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	font-size: 1.125rem;
+}
