@@ -85,16 +85,18 @@
    background-position-x: 0.75rem;
 }
 
+#password-input-container{
+   position: relative; /*que porrra é essa ????? kkkkkkk */
+   /* trick locão  */
+}
+
 #password-input-container img{
-   
-
-   /* TODO: ajeitar posição do botão de mostrar senha */
-
    position: absolute;
+   right: 5%;
+   top: 30%;
+
    width: 1.25rem;
    height: 1.25rem;
-   left: 39%;
-   top: 59%;
 
    cursor: pointer;
 }
