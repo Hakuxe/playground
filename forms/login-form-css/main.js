@@ -1,19 +1,21 @@
 //@ts-check
 const FORM = {
-    form: document.querySelector('#login-form'),
-	loginData: { email: "", password: "" },
+	form: document.querySelector("#login-form"),
+	loginData: { email: "", password: "", remember: false },
+	
 	inputEmail: document.getElementById("email"),
 	inputPassword: document.getElementById("password"),
 	showPassword: document.getElementById("show-password"),
+	rememberUser: document.getElementById("remember"),
 
-    handleSubmit: (event) => {
-        event.preventDefault();
-        console.log(FORM.loginData);
-    },
+	handleSubmit: (event) => {
+		event.preventDefault();
+		console.log(FORM.loginData);
+	},
 
 	/**
 	 * Function handleInput
-	 * @param    { Object } event   
+	 * @param    { Object } event
 	 * @return   { void }
 	 */
 	handleInput: (event) => {
@@ -27,6 +29,12 @@ const FORM = {
 		}
 	},
 
+	handleInputChecked: (event) => {
+		const { name, checked } = event.target;
+
+		FORM.loginData[name] = checked;
+	},
+
 	toggleShowPassword: () => {
 		let { inputPassword } = FORM;
 
@@ -38,8 +46,9 @@ const FORM = {
 	},
 };
 
-FORM.inputPassword.addEventListener("change", FORM.handleInput);
 FORM.inputEmail.addEventListener("change", FORM.handleInput);
+FORM.inputPassword.addEventListener("change", FORM.handleInput);
 FORM.showPassword.addEventListener("click", FORM.toggleShowPassword);
+FORM.rememberUser.addEventListener("change", FORM.handleInputChecked);
 
-FORM.form.addEventListener('submit',FORM.handleSubmit)
+FORM.form.addEventListener("submit", FORM.handleSubmit);
