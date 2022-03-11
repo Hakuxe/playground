@@ -19,12 +19,12 @@
 	<body>
 		<div id="container">
 			<main id="content">
-				<img id="logo" src="./assets/logo.svg" alt="" />
+				<img id="logo" src="./assets/logo.svg" alt="logo camp.in" />
 
-				<form action="">
+				<form action="" id="login-form">
 					<div class="header-form">
 						<h2 class="title-form">
-							<img src="./assets/log-in.svg" alt="" />
+							<img src="./assets/log-in.svg" alt="imagem log-in" />
 							Faça seu login
 						</h2>
 						<p>Entre com suas informações de cadastro.</p>
@@ -38,6 +38,7 @@
 							type="email"
 							name="email"
 							placeholder="Digite seu e-mail"
+							required
 						/>
 					</fieldset>
 					<fieldset class="input-group">
@@ -49,8 +50,10 @@
 								type="password"
 								name="password"
 								placeholder="Digite sua senha"
+								minlength="8"
+								required
 							/>
-							<img id="show-password" src="./assets/eye.svg" alt="" />
+							<img id="show-password" src="./assets/eye.svg" alt="show" />
 						</div>
 					</fieldset>
 					<fieldset class="input-group help-login">
@@ -58,12 +61,12 @@
 							<input type="checkbox" id="remember" />
 							<label for="remember">Lembre-me</label>
 						</div>
-						<a>Esqueci minha senha</a>
+						<a href="#">Esqueci minha senha</a>
 					</fieldset>
 
 					<fieldset class="input-group login-action">
 						<button class="primary-btn">entrar</button>
-						<span> Não tem uma conta? <a>Registre-se</a></span>
+						<span> Não tem uma conta? <a href="#">Registre-se</a></span>
 					</fieldset>
 				</form>
 			</main>

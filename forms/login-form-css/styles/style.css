@@ -127,7 +127,7 @@
 .input-group .checkbox-container #remember:checked {
 
   background-color: var(--primary-color);
-  background-image: url('./assets/check.svg');
+  background-image: url('../assets/check.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -145,6 +145,7 @@
    font-size: 0.875rem;
    font-weight: 600;
    font-family: "Poppins", sans-serif;
+   text-decoration: none;
 
    color: var(--primary-color);
    cursor: pointer;
