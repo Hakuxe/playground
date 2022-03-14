@@ -1,0 +1,25 @@
+:root {
+	--backgrond: #000;
+	--text-color: #fff;
+	--text-color-menu-mobile: #e1e1e6;
+
+	--button: #8257e5;
+	--border: #29292e;
+	--border-menu-mobile: #a8a8b3;
+}
+
+/* Utils ============================================= */
+
+.hidden {
+	display: none;
+}
+
+.title-negative {
+	background-color: var(--backgrond);
+	text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button),
+		-1px 1px 0 var(--button), 1px 1px 0 var(--button);
+}
+
+h1{
+	color: red;
+}
