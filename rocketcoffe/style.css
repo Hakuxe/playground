@@ -10,6 +10,25 @@
 
 /* Utils ============================================= */
 
+
+nav{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 1.5rem 1rem;
+}
+
+.menu{
+	color: var(--text-color);
+	text-transform: capitalize;
+}
+
+.menu li{
+	padding: 1rem;
+	border: 1px solid var(--border);
+}
+
 .hidden {
 	display: none;
 }
@@ -18,8 +37,4 @@
 	background-color: var(--backgrond);
 	text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button),
 		-1px 1px 0 var(--button), 1px 1px 0 var(--button);
-}
-
-h1{
-	color: red;
 }
