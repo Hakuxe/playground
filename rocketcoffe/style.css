@@ -9,8 +9,20 @@
 }
 
 /* Utils ============================================= */
+.hidden {
+	display: none;
+}
+
+.title-negative {
+	background-color: var(--backgrond);
+	text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button),
+		-1px 1px 0 var(--button), 1px 1px 0 var(--button);
+}
 
 
+
+/* main content ============================================= */
+/* navbar */
 nav{
 	display: flex;
 	justify-content: space-between;
@@ -29,12 +41,4 @@ nav{
 	border: 1px solid var(--border);
 }
 
-.hidden {
-	display: none;
-}
 
-.title-negative {
-	background-color: var(--backgrond);
-	text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button),
-		-1px 1px 0 var(--button), 1px 1px 0 var(--button);
-}
