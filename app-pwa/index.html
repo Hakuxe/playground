@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+		<link rel="manifest" href="./manifest.webmanifest">
+		<link rel="icon" type="image/svg+xml" href="assets/favicon.ico" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="apple-mobile-web-app-title" content="Pão duro app" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/icons/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/icons/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/icons/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/icons/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="./assets/icons/android-icon-192x192.png">
+		
+
+
+		<title>Pão duro app</title>
+		<link rel="stylesheet" href="./styles/global.css" />
+		<link rel="stylesheet" href="./styles/styles.css" />
+	</head>
+	<body>
+		<section id="report-container">
+			<header>
+				<div class="balance">
+					<p>saldo restante:</p>
+					<h3 id="total">R$ 1000,00</h3>
+				</div>
+				<button id="add-transaction" class="btn-add">
+					<img src="./assets/add_black_24dp.svg" alt="" />
+				</button>
+			</header>
+
+			<div class="card">
+				<h3>
+					<span>Saídas</span>
+					<img src="./assets/trending_down.svg" alt="icone gastos" />
+				</h3>
+				<p id="expense-balance">R$ 0,00</p>
+			</div>
+			<div class="card">
+				<h3>
+					<span>Entradas</span>
+					<img src="./assets/trending_up.svg" alt="icone ganhos" />
+				</h3>
+				<p id="income-balance">R$ 0,00</p>
+			</div>
+		</section>
+		<section id="extract-container">
+			<p class="section-title">Extrato:</p>
+
+			<table id="data-table">
+				<thead>
+					<tr>
+						<th>Descrição</th>
+						<th>valor</th>
+						<th></th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- dados vindo do javascript -->
+				</tbody>
+			</table>
+		</section>
+
+		<div class="modal-overlay hidden">
+			<div class="modal-container hidden">
+				<form id="form-transaction" action="/">
+					<h2 id="modal-title">Nova Movimentação</h2>
+					<fieldset class="input-group">
+						<label for="description">Descrição:</label>
+						<input
+							type="text"
+							id="description"
+							name="description"
+							placeholder="Descrição"
+							autofocus
+						/>
+					</fieldset>
+
+					<fieldset class="input-group">
+						
+							<label for="amount">Valor:</label>
+							<input
+								type="number"
+								id="amount"
+								name="amount"
+								placeholder="0.00"
+								step="0.01"
+							/>
+							<small class="help"
+								>utilize ponto(.) para as casas decimais</small
+							>
+						
+					</fieldset>
+					<fieldset class="input-group radio-group">
+						<div>
+							<input
+								type="radio"
+								id="type-income"
+								name="type"
+								value="income"
+							/>
+							<label for="type-income">Ganho</label>
+						</div>
+						<div>
+							<input
+								type="radio"
+								id="type-expense"
+								name="type"
+								value="expense"
+							/>
+							<label for="type-expense">Gasto</label>
+						</div>
+						
+					</fieldset>
+
+					<fieldset class="input-group">
+						<label for="date">Data:</label>
+						<input type="date" id="date" name="date" />
+					</fieldset>
+				</form>
+				<div class="input-group actions">
+					<button id="close-modal" class="btn-danger">Cancelar</button>
+					<button
+						id="form-submit"
+						form="form-transaction"
+						type="submit"
+						class="btn-success"
+					>
+						Adicionar
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<script type="module" src="./js/index.js"></script>
+	</body>
+</html>

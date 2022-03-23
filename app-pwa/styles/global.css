@@ -1,0 +1,45 @@
+:root{
+	--background:#f7f9fc;
+	--card-background: #ffffff;
+
+	--gray:#AAA;
+
+	--overlay:rgba(0, 0, 0, 0.7);
+}
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* utils ======================================= */
+
+.expense{
+	background-color: rgba(255, 0, 0, 0.3);
+}
+
+.income{
+	background-color:rgba(0, 255, 0, 0.3);
+}
+
+.btn-success{
+	background-color: green;
+	color: white;
+
+	font-weight: bold;
+	font-size: 1rem;
+
+	text-align: center;
+}
+
+.btn-danger{
+	background-color: red;
+	color: white;
+
+	font-weight: bold;
+	font-size: 1rem;
+}
+
