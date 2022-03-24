@@ -67,7 +67,9 @@
 
 ## 3. Checklist de implementação
 
-   - A aplicação é original e não uma cópia da aplicação de um colega ou de uma aplicação já existente? <br>
+   - A aplicação é original e não uma cópia da aplicação de um colega ou de uma aplicação já existente? **Não** <br>
+   > Com a grande variedade de apps disponíveis no mercado, já existem aplicações com o mesmo propósito e funcionalidades semelhantes  às da apresentada. 
+   >O diferencial deste app é ser construído como uma pwa.
    - A aplicação tem pelo menos duas interfaces (telas ou páginas) independentes? **Sim** <br>
    - A aplicação armazena e usa de forma relevante dados complexos do usuário? **Sim** <br>
    - A aplicação possui um manifesto para instalação no dispositivo do usuário? **Sim** <br>
