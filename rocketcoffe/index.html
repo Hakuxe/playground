@@ -12,43 +12,79 @@
 		/>
 
 		<title>RocketCoffe</title>
-		
+
 		<link rel="stylesheet" href="./styles/global.css" />
 		<link rel="stylesheet" href="./style.css" />
+		<link rel="stylesheet" href="./styles/responsive.css" />
 
 		<script type="module" defer src="/main.js"></script>
 	</head>
 	<body>
-		<header>
-			<nav>
-				<img src="./assets/logo-mobile.svg" alt="logo rocketseat, desenho de um raio com a cor roxa ">
-				<img id="burgerMenu" src="./assets/menu-buguer-open.svg" alt="botão abrir menu">
-				<img id="burgerMenuClose"  class="hidden" src="./assets/menu-buguer-close.svg" alt="botão abrir menu">
-				
-			</nav>
-			<section class="menu hidden">
-				<ul>
-					<li>home</li>
-					<li>menu</li>
-					<li>recompensas</li>
-					<li>gift cards</li>
-					<li>lojas</li>
-				</ul>
-			</section>
-			
-		</header>
+		<div id="backgroundMosaic">
+			<div class="box1"></div>
+			<div class="box2"></div>
+		</div>
 
+		<div id="container">
+			<header>
+				<nav>
+					<img
+						id="logo"
+						src="./assets/logo-mobile.svg"
+						alt="logo rocketseat, desenho de um raio com a cor roxa "
+					/>
+					<img
+						id="burgerMenu"
+						src="./assets/menu-buguer-open.svg"
+						alt="botão abrir menu"
+					/>
+					<img
+						id="burgerMenuClose"
+						class="hidden"
+						src="./assets/menu-buguer-close.svg"
+						alt="botão abrir menu"
+					/>
 
-		<main>
-			
-		</main>
+					<section class="menu hidden">
+						<ul>
+							<li>home</li>
+							<li>menu</li>
+							<li>recompensas</li>
+							<li>gift cards</li>
+							<li>lojas</li>
+						</ul>
+					</section>
 
-		
-		<script
-			  src="https://code.jquery.com/jquery-3.6.0.min.js"
-			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-			  crossorigin="anonymous"
-		></script>
-		<script src="./main.js"></script>
+					<button class="btnPrimary">pegar meu café</button>
+				</nav>
+			</header>
+
+			<main>
+				<div class="openMessage">
+					<h3 class="message">
+						O café que fará seu código decolar para o próximo nível.
+					</h3>
+
+					<button class="btnPrimary">
+						pegar meu café <img src="./assets/arrow.svg" />
+					</button>
+				</div>
+
+				<section class="containerGreatCoffe">
+					<h2>GreatCoffe</h2>
+					<h2 class="title-negative">&lt;GreatCoffe/&gt;</h2>
+					
+				</section>
+			</main>
+		</div>
+		<div class="imageContainer">
+			<img src="./assets/rocket-coffee.png" alt="" />
+		</div>
 	</body>
+	<script
+		src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+		crossorigin="anonymous"
+	></script>
+	<script src="./main.js"></script>
 </html>

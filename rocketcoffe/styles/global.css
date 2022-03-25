@@ -18,4 +18,10 @@
 body{
 	font-family: 'Manrope', sans-serif;
 	background-color: var(--backgrond);
+	color: var(--text-color);
+	
+	background-image: url("./assets/blur-mobile.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }

@@ -5,7 +5,7 @@ const burgerMenu = $("#burgerMenu");
 burgerMenu.on("click", function () {
 	$("#burgerMenu").hide();
 	$("#burgerMenuClose").show();
-	$(".menu").show();
+	$(".menu").removeClass("hidden");
 	$("header").addClass('menuOpen')
 });
 
@@ -13,6 +13,6 @@ burgerMenu.on("click", function () {
 $("#burgerMenuClose").on('click', ()=>{
 	$("#burgerMenu").show();
 	$("#burgerMenuClose").hide();
-	$(".menu").hide();
+	$(".menu").addClass("hidden");
 	$("header").removeClass('menuOpen')
 })

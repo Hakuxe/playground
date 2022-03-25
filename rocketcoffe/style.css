@@ -1,12 +1,4 @@
-:root {
-	--backgrond: #000;
-	--text-color: #fff;
-	--text-color-menu-mobile: #e1e1e6;
 
-	--button: #8257e5;
-	--border: #29292e;
-	--border-menu-mobile: #a8a8b3;
-}
 
 /* Utils ============================================= */
 .hidden {
@@ -21,8 +13,26 @@
 	
 }
 
-.title-negative {
+.btnPrimary{
+	padding: 0.5rem 1.5rem ;
+
+	border: 1px solid var(--button);
+	border-radius: 0.25rem;
+
 	background-color: var(--backgrond);
+	color: var(--text-color);
+
+	font-weight: 700;
+	font-size: 0.6rem;
+	text-transform: uppercase;
+
+	display: flex;
+	align-items: center;
+	gap: 0.7rem;
+}
+
+.title-negative {
+	color: var(--backgrond);
 	text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button),
 		-1px 1px 0 var(--button), 1px 1px 0 var(--button);
 }
@@ -31,14 +41,39 @@
 
 /* main content ============================================= */
 /* navbar */
-
-
 nav{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 
 	padding: 1.5rem 1rem;
+
+	
+}
+
+header.menuOpen nav{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto 1fr;
+
+	padding: 0;
+}
+
+header.menuOpen nav .menu{
+	grid-column: 1 / span 2;
+}
+
+header.menuOpen nav #logo{
+	padding: 1.5rem 1rem;
+}
+
+header.menuOpen nav #burgerMenuClose{
+	justify-self: end;
+	padding: 1.5rem 1rem;
+}
+
+header nav button.btnPrimary{
+	display: none;
 }
 
 .menu{
@@ -53,15 +88,60 @@ nav{
 
 	color: var(--text-color-menu-mobile);
 	font-weight: bold;
+	list-style-type: none;
 }
 
 /* FIXME: marcar um item clicado no mobile? */
 
-.menu li:hover{
+header.menuOpen nav .menu ul li:hover{
 	color: var(--text-color);
 	border-right: 0px;
 	border-left: 5px solid var(--button);	
 }
+
+
+/* main */
+main{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	align-items: center;
+}
+
+.openMessage{
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 2rem 0rem;
+}
+
+.message{
+	margin: 1rem 0 3rem 0 ;
+	max-width: 80%;
+
+	font-size: 1.8rem;
+	font-weight: 400;
+	text-align: center;
+}
+
+
+.containerGreatCoffe{
+	text-align: center;
+	font-size: 1.8rem;
+}
+
+.imageContainer{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.imageContainer img{
+	max-width: 100%;
+}
+
 
 
 
