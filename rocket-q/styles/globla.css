@@ -41,9 +41,9 @@ textarea {
 	/* font-family: 'Poppins', sans-serif; */
 }
 
-.content{
-   width: 100%;
-   margin: 0 auto;
+.content {
+	width: 100%;
+	margin: 0 auto;
 }
 
 .sr-only {
@@ -57,3 +57,59 @@ textarea {
 	white-space: nowrap;
 	border-width: 0;
 }
+
+/* input and buttons */
+input,
+button,
+.button {
+	height: 5rem;
+	border-radius: 0.8rem;
+}
+
+button,
+.button {
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	line-height: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background-color: var(--blue);
+	color: var(--white);
+	cursor: pointer;
+
+	transition: filter 200ms;
+}
+
+button:hover,
+.button:hover {
+	filter: brightness(1.2);
+	
+}
+
+button > img,
+.button > img {
+	margin-right: 1rem;
+	width: 2rem;
+	
+}
+
+button.outlined,
+.button.outlined{
+	border: 0.2rem solid var(--blues);
+	color: var(--blue);
+	background-color: var(--white);
+
+}
+
+.content header{
+	width: 80%;
+	margin: 3.5rem auto;
+}
+
+.content header img{
+	width: 16.7rem;
+}
+
