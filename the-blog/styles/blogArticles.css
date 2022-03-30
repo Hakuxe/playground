@@ -1,0 +1,46 @@
+.blog-articles{
+   width: 90%;
+   margin: 0 auto;
+   margin-top:  2rem;
+}
+
+.blog-articles .recent-posts{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr 1fr ;
+}
+
+.recent-posts article:first-child{
+   grid-column-start: 1;
+   
+   grid-row-start: 1;
+   grid-row-end:  span 2;
+   
+   
+}
+
+.card.card-noimage{
+   padding: 0rem 4rem;
+}
+
+
+.old-posts{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-top:  2rem;
+  
+}
+
+.card{
+   padding: 1rem;
+   text-align: justify;
+}
+
+.card h2{
+   margin: 0.5rem 0 1rem;
+}
+
+.card img{
+   max-width: 100%;
+}

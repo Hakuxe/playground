@@ -1,0 +1,5 @@
+/* testando styles css como  componentes */
+@import url("./styles/global.css");
+@import url("./styles/navbar.css");
+@import url("./styles/landing.css");
+@import url("./styles/blogArticles.css");
