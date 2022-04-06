@@ -16,6 +16,7 @@
 		<!-- styles -->
 		<link rel="stylesheet" href="./styles/globla.css" />
 		<link rel="stylesheet" href="./styles/room.css" />
+		<link rel="stylesheet" href="./styles/modal.css" />
 
 		<title>Criar sala - Rocket.Q</title>
 	</head>
@@ -138,6 +139,30 @@
 					</div>
 				</section>
 			</main>
+		</div>
+
+		<!-- modal -->
+
+		<div class="modal-wrapper">
+			<div class="modal">
+				<h2>Excluir</h2>
+				<p>Tem certeza que você deseja excluir essa pergunta?</p>
+				<form action="">
+					<label class="sr-only" for="password">
+						Digite a senha de administrador
+					</label>
+					<input
+						id="password"
+						name="password"
+						type="password"
+						placeholder="Digite sua senha"
+					/>
+					<div class="buttons">
+						<div class="button basic">Cancelar</div>
+						<button class="danger">Sim, excluir</button>
+					</div>
+				</form>
+			</div>
 		</div>
 	</body>
 </html>
