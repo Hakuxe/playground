@@ -1,0 +1,102 @@
+:root{
+   --border:#414141;
+   --background-button: #2B2B2B;
+
+   --text:#fdfdfd;
+
+   --white:#fff;
+
+   --orange:rgb(220, 140, 0);
+
+
+}
+
+*{
+   margin: 0;
+   padding: 0;
+   text-decoration: none;
+   box-sizing: border-box;
+  
+	font-size: 62.5%; /* 10px pra ficar mais fácil de calcular em rem  */
+
+}
+
+/* buttons =========================== */
+
+button, .button{
+   font-size: 2.5rem;
+   border: none;
+}
+
+
+.col-md{
+   grid-column-start: 1;
+   grid-column-end: 3;
+   
+}
+
+/* content ============================= */
+
+main{
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+
+   background-color: var(--border);
+   
+}
+
+
+.container{
+   width: min(90%, 30rem);
+   margin: auto;
+}
+
+.container input{
+   width: 100%;
+   height: min(10rem,10vh);
+
+   outline: none;
+   
+   font-size: 1.5rem;
+
+   background-color: var(--background-button);
+   color: var(--text);
+   border: 1px solid var(--border);
+}
+
+.container .interaction-container{
+   display: grid;
+   grid-template-columns: 70% 30%
+}
+
+.container .number-wrapper{
+   display: grid;
+   grid-template-columns: repeat( 3, 1fr);
+}
+
+.container .number-wrapper button{
+   color: var(--text);
+   border: 1px solid var(--border);
+   background-color: var(--background-button); 
+   transition: 100ms ease;
+}
+
+.container .number-wrapper button:hover{
+   background-color: var(--border);
+}
+
+
+
+
+.actions{
+   background-color: red;
+   display: flex;
+   flex-direction: column;
+}
+
+.actions button{
+   background-color: var(--orange);
+   border: 1px solid var(--border);
+   color: var(--text);
+}
