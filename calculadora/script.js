@@ -1,41 +1,27 @@
-/**
- * Element selector: querySelector
- * @param {string} element - element identifier
- * @param {boolean} [all] - select all elements with identifier
- * @return {string} returns the first node that matches the identifier
- *
- * @example
- *     $('input')
- */
+import { $ } from "./scripts/utils.js";
 
-function $(element, all) {
-	if (all) {
-		return document.querySelectorAll(element);
-	} else {
-		return document.querySelector(element);
-	}
-}
+const inputEntry = $("#entry");
+const inputCheckCalc = $("#check");
+const numberButtons = $(".number", true);
+const operatorButtons = $(".operator", true);
 
+$(".clear").addEventListener("click", () => {
+	inputEntry.value = "";
+	inputCheckCalc.value = "";
+});
 
+numberButtons.forEach((button) => {
+	button.addEventListener("click", () => (inputEntry.value += button.value));
+});
 
+// clicar no operador
+operatorButtons.forEach((operator) => {
+	operator.addEventListener("click", () => {
+		console.log("click", operator.value);
+		// subir o que ta no input entry para o checkinput
+		inputCheckCalc.value += inputEntry.value + operator.value;
+		inputEntry.value = "";
+	});
+});
 
-
-
-const sum = (number1, number2) => {
-	return Number(number1) + Number(number2);
-};
-
-const subtract = (number1, number2) => {
-	return Number(number1) - Number(number2);
-};
-
-const multiply = (number1, number2) => {
-	return Number(number1) - Number(number2);
-};
-
-const divide = (number1, number2) => {
-   if(number2 == 0){
-      return null
-   }
-	return Number(number1) / Number(number2);
-};
+// fazer a operação qndo clicar no igual 

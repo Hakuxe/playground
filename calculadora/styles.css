@@ -55,6 +55,7 @@ main{
 .container input{
    width: 100%;
    height: min(10rem,10vh);
+   text-align: right;
 
    outline: none;
    
