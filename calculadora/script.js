@@ -1,4 +1,11 @@
-import { $, divide, multiply, subtract, sum } from "./scripts/utils.js";
+import {
+	$,
+	compute,
+	divide,
+	multiply,
+	subtract,
+	sum,
+} from "./scripts/utils.js";
 
 const inputEntry = $("#entry");
 const inputCheckCalc = $("#check");
@@ -6,16 +13,31 @@ const numberButtons = $(".number", true);
 const operatorButtons = $(".operator", true);
 const resultButton = $("#result");
 
-let account = [];
+let result = 0;
+let firstNumber = 0;
+let secondNumber = 0;
+let mainOperator = "";
 
 $(".clear").addEventListener("click", () => {
 	inputEntry.value = "";
 	inputCheckCalc.value = "";
-	account = [];
+	firstNumber = 0;
+	secondNumber = 0;
+	result = 0;
 });
 
 function clearEntryFiled() {
 	inputEntry.value = "";
+}
+
+function clearCheckFiled() {
+	inputCheckCalc.value = "";
+}
+
+function updateCheckFildAndMainOperaor(result, operator) {
+	clearCheckFiled();
+	inputCheckCalc.value += result + operator;
+	mainOperator = operator;
 }
 
 numberButtons.forEach((button) => {
@@ -25,12 +47,47 @@ numberButtons.forEach((button) => {
 // clicar no operador
 operatorButtons.forEach((operator) => {
 	operator.addEventListener("click", () => {
-		// subir o que ta no input entry para o checkinput
-		inputCheckCalc.value += inputEntry.value + operator.value;
-
-		account.push(Number(inputEntry.value));
-		account.push(operator.value);
+		if (firstNumber === 0) {
+			// subir o que ta no input entry para o checkinput
 		
+			updateCheckFildAndMainOperaor(inputEntry.value, operator.value);
+			firstNumber = Number(inputEntry.value);
+
+		} else {
+			switch (mainOperator) {
+				case "+":
+					if (result != 0) firstNumber = result;
+
+					result = sum(firstNumber, Number(inputEntry.value));
+					updateCheckFildAndMainOperaor(result, operator.value);
+					break;
+
+				case "-":
+					if (result != 0) firstNumber = result;
+
+					result = subtract(firstNumber, Number(inputEntry.value));
+					updateCheckFildAndMainOperaor(result, operator.value);
+					break;
+
+				case "*":
+					if (result != 0) firstNumber = result;
+
+					result = multiply(firstNumber, Number(inputEntry.value));
+					updateCheckFildAndMainOperaor(result, operator.value);
+					break;
+
+				case "/":
+					if (result != 0) firstNumber = result;
+
+					result = divide(firstNumber, Number(inputEntry.value));
+					updateCheckFildAndMainOperaor(result, operator.value);
+					break;
+
+				default:
+					break;
+			}
+		}
+
 		clearEntryFiled();
 	});
 });
@@ -40,31 +97,21 @@ operatorButtons.forEach((operator) => {
 resultButton.addEventListener("click", () => {
 	//subir o ultimo valor pro check
 	inputCheckCalc.value += inputEntry.value;
-	account.push(Number(inputEntry.value));
 
-	console.log(account);
-	for (let i = 0; i < account.length; i++) {
-		switch (account[i]) {
-			case "+":
-				inputEntry.value = sum(account[i - 1], account[i + 1]);
-				break;
+	secondNumber = Number(inputEntry.value);
 
-			case "-":
-				inputEntry.value = subtract(account[i - 1], account[i + 1]);
-				break;
+	if (result === 0) {
+		result = compute(firstNumber, secondNumber, mainOperator);
+		inputEntry.value = result;
 
-			case "*":
-				inputEntry.value = multiply(account[i - 1], account[i + 1]);
-				break;
+		firstNumber = 0;
+		secondNumber = 0;
+	} else {
+		result = compute(result, secondNumber, mainOperator);
+		inputEntry.value = result;
 
-			case "/":
-				inputEntry.value = divide(account[i - 1], account[i + 1]);
-				break;
-
-			default:
-				break;
-		}
+		firstNumber = 0;
+		secondNumber = 0;
 	}
-
-	//fazer a operação
+	console.log({ firstNumber, secondNumber, result, mainOperator });
 });
