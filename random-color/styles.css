@@ -1,0 +1,101 @@
+/* GLOBAL ======================================== */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+	text-decoration: none;
+}
+
+:root {
+	--light-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+	--dark-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
+   --border-radius: 0.8rem;
+
+   --background:hsl(210, 36%, 96%);
+
+   --white:#FFF;
+   --black:#000;
+   --black-100:#222;
+
+   --blue: hsl(205, 78%, 60%);
+
+	font-size: 62.5%; /* 10px pra ficar mais fácil de calcular em rem  */
+}
+
+h1 {
+	font-size: 2.5rem;
+}
+h2 {
+	font-size: 2rem;
+}
+
+
+.button {
+	padding: 0.5rem 2rem;
+	border-radius: var(--border-radius);
+   
+	border: 1px solid var(--black);
+	background-color: var(--white);
+
+   cursor: pointer;
+}
+
+
+
+/* css ======================================== */
+header {
+	height: 10vh;
+   width: 100vw;
+   position: fixed;
+   top: 0;
+   left: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+
+   background-color: var(--white);
+	box-shadow: var(--dark-shadow);
+}
+
+header .navbar {
+	font-size: 1.5rem;
+}
+
+header .navbar a{
+	font-weight: bold;
+   color: var(--black);
+}
+
+header .navbar :nth-child(1) {
+	margin-right: 2rem;
+}
+
+main {
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	background-color: var(--background);
+}
+
+main .box-text{
+   margin-bottom: 2rem;
+   padding: 2rem;
+   text-align: center;
+   border-radius: var(--border-radius);
+
+   color: var(--white);
+   background-color: var(--black-100);
+}
+
+main .box-text #colorCode{
+   text-transform: uppercase;
+   color: var(--blue);
+}
