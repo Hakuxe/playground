@@ -1,0 +1,22 @@
+main {
+	width: 100vw;
+	height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+main h1 {
+	font-size: 5rem;
+}
+
+main #containerCounterNumber {
+	margin: 1rem 0;
+	font-size: 5rem;
+}
+
+main .actions :nth-child(2) {
+	margin: 0 2rem;
+}
