@@ -1,0 +1,140 @@
+.primary-btn {
+	display: block;
+	margin-top: 1rem;
+	padding: 0.5rem 2rem;
+
+	border-radius: 1.2rem;
+	border: 2px solid var(--clr-primary-5);
+
+	color: var(--clr-primary-5);
+	background-color: var(--clr-primary-10);
+	cursor: pointer;
+
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.primary-btn:hover {
+	background-color: var(--clr-grey-10);
+	color: var(--clr-primary-6);
+
+	transition: var(--transition);
+	font-weight: bold;
+}
+
+main {
+   width: 100vw;
+   height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+main div.underline {
+	height: 0.4rem;
+	width: 5rem;
+	margin-bottom: 6.4rem;
+	background: var(--clr-primary-5);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.review {
+	width: 80vw;
+	max-width: var(--fixed-width);
+	padding: 3rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	background-color: var(--clr-white);
+	text-align: center;
+   box-shadow: var(--light-shadow);
+}
+
+.review .image-container {
+	border-radius: 50%;
+	width: 16rem;
+	height: 15rem;
+	margin-bottom: 2rem;
+
+	background-image: url(./person-1.jpeg);
+	background-position: center;
+	background-size: cover;
+   box-shadow: 5px -5px 0px var(--clr-primary-5);
+}
+
+.review .image-container::after {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f10e";
+
+	width: 4rem;
+	height: 4rem;
+
+	display: grid;
+	place-items: center;
+
+	border-radius: 50%;
+	transform: translateY(25%);
+
+	background: var(--clr-primary-5);
+	color: var(--clr-white);
+}
+
+
+.review .image-container img {
+	max-width: 100%;
+}
+
+.review .name {
+	text-transform: capitalize;
+	letter-spacing: var(--spacing);
+}
+
+.review .job {
+	margin-bottom: 0.75rem;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	color: var(--clr-primary-5);
+}
+
+.review .review-text {
+	line-height: 2.5rem;
+	margin-bottom: 0.75rem;
+	max-width: min(112rem, 90%);
+}
+
+
+.review .actions .next-btn {
+	padding-left: 2rem;
+
+	font-size: 2.5rem;
+
+	color: var(--clr-primary-5);
+	background-color: var(--clr-white);
+	cursor: pointer;
+}
+
+.review .actions .next-btn:hover {
+	color: var(--clr-primary-6);
+	transition: var(--transition);
+}
+
+.review .actions .prev-btn {
+	padding-right: 2rem;
+
+	font-size: 2.5rem;
+
+	color: var(--clr-primary-5);
+	background-color: var(--clr-white);
+	cursor: pointer;
+}
+
+.review .actions .prev-btn:hover {
+	color: var(--clr-primary-6);
+	transition: var(--transition);
+}
