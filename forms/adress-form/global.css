@@ -16,8 +16,7 @@
 	--clr-black: #222;
 	--clr-white: #fff;
 
-	--max-width: 1170px;
-	--fixed-width: 620px;
+
 
 	font-size: 62.5%; /* 10px pra ficar mais fácil de calcular em rem  */
 }

@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="styles.css" />
 	</head>
 	<body>
-		<main>
+		<main id="content">
 			<form action="">
 				<div class="header-form">
 					<h2 class="title-form">Endereço</h2>
@@ -19,7 +19,16 @@
 
 				<fieldset class="input-group">
 					<!-- criar input tyoe select ?  -->
-					
+					<label for="state">UF: </label>
+					<select name="state" id="state">
+						<option value="#">selecione o uf</option>
+					</select>
+				</fieldset>
+				<fieldset class="input-group">
+					<label for="uf">Cidade: </label>
+					<select name="city" id="city">
+						<option value="#">selecione a cidade</option>
+					</select>
 				</fieldset>
 			</form>
 		</main>
