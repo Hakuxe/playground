@@ -39,8 +39,9 @@ app.get("/users", (req, res) =>
 app.get("/users/:id", (req, res) => {
 	const { id } = req.params;
 
-  const userSelected = users.filter((item) => Number(item.id) === Number(id));
-
-  res.send(userSelected);
-
+	const userSelected = users.find((item) => Number(item.id) === Number(id));
+	if (!userSelected) {
+		return res.json("User nor found!");
+	}
+	res.json(userSelected);
 });

@@ -10,8 +10,15 @@ const getUsers = () => {
 const getUserById = (id) => {
 	fetch(`${URL}/${id}`)
 		.then((response) => response.json())
-		.then((data) => (renderUserApi.textContent = JSON.stringify(data)))
+		.then((data) => {
+			const {name, city} = data;
+			
+			userName.textContent = name;
+			userCity.textContent = city;
+		})
 		.catch((error) => console.error(error));
 };
 
-getUserById(2);
+getUsers();
+
+getUserById(1);
