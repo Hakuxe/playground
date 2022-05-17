@@ -1,3 +1,12 @@
+/*
+   # Rode o comando 
+   $ npm install 
+
+   # iniciar a aplicação, rode o comando 
+   $ npm start 
+
+*/
+
 import express from 'express';
 const PORT = 5500
 const app = express();
