@@ -45,3 +45,12 @@ app.get("/users/:id", (req, res) => {
 	}
 	res.json(userSelected);
 });
+
+app.post("/users", (req, res) => {
+	// criar um id pro new user
+	let lastUserId = users[users.length - 1].id;
+	// inserir no array
+	users.push({ id: lastUserId + 1, ...req.body });
+
+	res.json("usuário inserido com sucesso!! ");
+});
