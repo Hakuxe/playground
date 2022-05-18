@@ -32,14 +32,34 @@ const addUser = (newUser) => {
 		.catch((error) => console.error(error));
 };
 
+const updateUser = (updatedUser, id) => {
+	fetch(`${URL}/${id}`,{
+		method:"PUT",
+		body: JSON.stringify(updatedUser),
+		headers: {
+			"Content-Type": "application/json; charset=UTF-8",
+		}
+	})
+		.then((response) => response.json())
+		.then((data) => alert(JSON.stringify(data)))
+		.catch((error) => console.error(error));
+};
 
 const newUser = {
 	name: "Cauan minas",
-	city:"Brumadinho"
-}
+	city: "Brumadinho",
+};
+
+const updatedUser = {
+	name: "Cauan Moura",
+	city: "Betim",
+};
 
 getUsers();
 
 getUserById(1);
 
-add.addEventListener("click", () => addUser(newUser)) 
+add.addEventListener("click", () => addUser(newUser));
+update.addEventListener("click", () => updateUser(updatedUser, 1));
+
+

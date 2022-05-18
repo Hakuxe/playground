@@ -54,3 +54,19 @@ app.post("/users", (req, res) => {
 
 	res.json("usuário inserido com sucesso!! ");
 });
+
+app.put("/users/:id", (req, res) => {
+	const { id } = req.params;
+
+	let userToEdit = users.find(item => Number(item.id) === Number(id));
+	
+	
+	userToEdit.name = req.body.name;
+	userToEdit.city = req.body.city;
+
+	users[users.findIndex(item => Number(item.id) === Number(id))] = {id: userToEdit.id, ...userToEdit}
+	
+
+	res.json("User Alterado")
+
+});
