@@ -33,12 +33,24 @@ const addUser = (newUser) => {
 };
 
 const updateUser = (updatedUser, id) => {
-	fetch(`${URL}/${id}`,{
-		method:"PUT",
+	fetch(`${URL}/${id}`, {
+		method: "PUT",
 		body: JSON.stringify(updatedUser),
 		headers: {
 			"Content-Type": "application/json; charset=UTF-8",
-		}
+		},
+	})
+		.then((response) => response.json())
+		.then((data) => alert(JSON.stringify(data)))
+		.catch((error) => console.error(error));
+};
+
+const deleteUser = (id) => {
+	fetch(`${URL}/${id}`, {
+		method: "DELETE",
+		headers: {
+			"Content-Type": "application/json; charset=UTF-8",
+		},
 	})
 		.then((response) => response.json())
 		.then((data) => alert(JSON.stringify(data)))
@@ -61,5 +73,4 @@ getUserById(1);
 
 add.addEventListener("click", () => addUser(newUser));
 update.addEventListener("click", () => updateUser(updatedUser, 1));
-
-
+btnDelete.addEventListener("click", () => deleteUser(1));

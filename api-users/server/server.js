@@ -58,15 +58,21 @@ app.post("/users", (req, res) => {
 app.put("/users/:id", (req, res) => {
 	const { id } = req.params;
 
-	let userToEdit = users.find(item => Number(item.id) === Number(id));
-	
-	
+	let userToEdit = users.find((item) => Number(item.id) === Number(id));
+
 	userToEdit.name = req.body.name;
 	userToEdit.city = req.body.city;
 
-	users[users.findIndex(item => Number(item.id) === Number(id))] = {id: userToEdit.id, ...userToEdit}
-	
+	users[users.findIndex((item) => Number(item.id) === Number(id))] = {
+		id: userToEdit.id,
+		...userToEdit,
+	};
 
-	res.json("User Alterado")
+	res.json("User Alterado");
+});
 
+app.delete("/users/:id", (req, res) => {
+	const { id } = req.params;
+	users = users.filter(item => Number(item.id) !== Number(id));
+	res.json("User deletado!!");
 });
