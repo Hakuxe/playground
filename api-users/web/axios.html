@@ -4,32 +4,30 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Api Users testes</title>
+		<title>Api Users testes axios</title>
 
 		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-		<script src="./main.js" type="module"></script>
 		<script src="./axiosApi.js" type="module"></script>
 	</head>
 	<body>
-		<div id="renderUserApi"></div>
+		<div id="renderUserApiAxios"></div>
 		<hr />
-		<p id="userName"></p>
-		<p id="userCity"></p>
-
+      
+		<p id="userSelected"></p>
+		<p id="userSelectedData"></p>
+      
 		<hr />
-		<p>add user {name: "Cauan minas", city:"Brumadinho"}</p>
+		<p id="resultAdd"></p>
 		<button id="add">add user</button>
 
-		<hr />
-		<p>update user 1 to  {name: "Cauan minas", city:"Brumadinho"}</p>
+		<p id="resulyUpdate"></p>
 		<button id="update">update user</button>
 
-		<hr />
-		<p>delete user 1 </p>
-		<button id="btnDelete">delete user  1</button>
+		
 
-		<hr />
-		<a href="./axios.html">usando axios</a>
+		<p id="userDeleted"></p>
+		<p id="resulyDelete"></p>
+		<button id="btnDelete">delete user 1</button>
 	</body>
 </html>

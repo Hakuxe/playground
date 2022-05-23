@@ -1,4 +1,4 @@
-const URL = "http://localhost:4000/users";
+export const URL = "http://localhost:4000/users";
 
 const getUsers = () => {
 	fetch(URL)
