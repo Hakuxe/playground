@@ -14,7 +14,7 @@
 	</head>
 	<body>
 		<main id="content">
-			<form action="">
+			<form action="submit">
 				<div class="header-form">
 					<h2 class="title-form">Endereço</h2>
 					<p>Entre com suas informações de cadastro.</p>
@@ -24,15 +24,18 @@
 					<!-- criar input tyoe select ?  -->
 					<label for="state">UF: </label>
 					<select name="state" id="state">
-						<option value="#">selecione o uf</option>
+						<option value="">selecione o uf</option>
 					</select>
 				</fieldset>
-				<fieldset class="input-group">
+				<fieldset  class="input-group">
 					<label for="city">Cidade: </label>
-					<select name="city" id="city">
-						<option value="#">selecione a cidade</option>
+					<select name="city" id="city" >
+						<option value="">selecione a cidade</option>
 					</select>
 				</fieldset>
+
+
+				<button id="btnSubmit" type="submit">Enviar</button>
 			</form>
 		</main>
 	</body>
