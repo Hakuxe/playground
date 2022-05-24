@@ -49,3 +49,17 @@ form {
    border-radius: 0.6rem;
    
 }
+
+
+#btnSubmit{
+	padding: 1rem 3rem ;
+	margin-top: 5rem;
+
+	font-weight: bold;
+	font-size: 2rem;
+
+	width: 100%;
+
+	background-color: var(--clr-green-dark);
+	color: var(--clr-white);
+}
