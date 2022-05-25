@@ -1,0 +1,23 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+:root {
+	--black: #0d114f;
+	--white: #fff;
+	--overlay: #040911;
+	--shadow:rgba(0, 0, 0, 0.08);
+	--background:#F9FBFF;
+	--border:#E0E0E0;
+
+	--gray-1: #B8B8B8;
+
+	
+	
+
+	
+	font-size: 62.5%; /* 10px pra ficar mais fácil de calcular em rem  */
+}
