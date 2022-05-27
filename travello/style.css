@@ -9,7 +9,6 @@
 	grid-template-rows: 1fr;
 }
 
-
 /* landgin ======================================== */
 
 .landing {
@@ -95,8 +94,6 @@
 	margin-bottom: 2.4rem;
 }
 
-
-
 /* ABOUT section =========================== */
 #aboutUs .grid-box {
 	margin-top: 12.8rem;
@@ -124,4 +121,40 @@
 	color: var(--text-color);
 
 	text-align: justify;
+}
+
+/* cards */
+
+#aboutUs .card-container {
+	width: 100%;
+	margin-bottom: 12.8rem;
+
+	display: flex;
+	justify-content: space-between;
+}
+
+#aboutUs .card-container .card {
+	width: 24%;
+	height: 23.3rem;
+	padding: 4.4rem 2.8rem 0rem ;
+	
+	background-color: var(--white);
+	box-shadow: 0px 7px 29px rgba(100, 100, 111, 0.2);
+
+	font-size: 1.6rem;
+}
+
+#aboutUs .card .card-title{
+	margin-top: 1.4rem;
+	margin-bottom: 1.5rem;
+
+	font-size: 2.4rem;
+	font-family: var(--ff-playfair-display);
+}
+
+#aboutUs .card .card-text{
+	font-size: 1.6rem;
+	line-height: 2.4rem;
+	font-family: var(--ff-work-sans);
+	color: var(--text-color);
 }
