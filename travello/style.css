@@ -14,7 +14,13 @@
 	background-repeat: no-repeat;
 	background-position: center;
 
-   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.grid-box {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
 }
 
 /* navbar */
@@ -52,20 +58,19 @@
 	color: var(--white);
 }
 
-
 /* content */
 
-.landing main {
+.landing article {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr;
 }
 
-.landing main div.landing-box {
+.landing article div.landing-box {
 	padding-top: 16.2rem;
 }
 
-.landing main h2.title {
+.landing article h2.title {
 	font-size: 6rem;
 	font-weight: 600;
 	line-height: 6.6rem;
@@ -74,7 +79,7 @@
 	margin-bottom: 2.4rem;
 }
 
-.landing main p.message {
+.landing article p.message {
 	font-size: 1.8rem;
 	font-weight: 400;
 	line-height: 2.7rem;
@@ -82,3 +87,36 @@
 
 	margin-bottom: 2.4rem;
 }
+
+/* about section =========================== */
+#aboutUs .grid-box {
+	margin-top: 12.8rem;
+	margin-bottom: 12.8rem;
+}
+
+#aboutUs .grid-box div {
+	width: 70%;
+	justify-self: center;
+}
+
+#aboutUs .subtitles {
+	margin-bottom: 2rem;
+}
+
+#aboutUs p.message {
+
+	margin-bottom: 2rem;
+
+	font-family: "Work Sans";
+	font-style: normal;
+	font-size: 1.8rem;
+	font-weight: 400;
+	line-height: 2.7rem;
+
+	color: var(--text-color);
+
+	text-align: justify;
+}
+
+
+
