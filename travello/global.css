@@ -20,7 +20,11 @@
 	--text-subtitle: #121212;
 	--text-color: #333333;
 
+	/* fonts */
 	font-size: 62.5%; /* 10px pra ficar mais fácil de calcular em rem  */
+
+	--ff-playfair-display: 'Playfair Display', serif;
+	--ff-work-sans: 'Work Sans', sans-serif;
 }
 
 button,
@@ -28,6 +32,7 @@ button,
 	padding: 0.8rem 2.4rem;
 
 	font-size: 1.6rem;
+	font-family: var(--ff-work-sans);
 	line-height: 1.9rem;
 
 	color: var(--white);
@@ -36,6 +41,7 @@ button,
 }
 
 .subtitles {
+	font-family: var(--ff-playfair-display);
 	font-size: 4.5rem;
 	font-weight: 500;
 	line-height: 6rem;

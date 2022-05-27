@@ -3,6 +3,15 @@
 	padding-right: 12rem;
 }
 
+.grid-box {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+}
+
+
+/* landgin ======================================== */
+
 .landing {
 	width: 100%;
 	height: 95vh;
@@ -17,12 +26,6 @@
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.grid-box {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr;
-}
-
 /* navbar */
 
 .landing header {
@@ -33,6 +36,8 @@
 	padding-top: 2.2rem;
 	padding-bottom: 2.2rem;
 	border-bottom: 0.2rem solid var(--border);
+
+	font-family: var(--ff-work-sans);
 }
 
 .landing header nav ul {
@@ -44,7 +49,7 @@
 }
 
 .landing header nav ul li {
-	margin-left: 2rem;
+	margin-left: 5rem;
 }
 
 .landing header nav ul:nth-child(1) {
@@ -71,6 +76,7 @@
 }
 
 .landing article h2.title {
+	font-family: var(--ff-playfair-display);
 	font-size: 6rem;
 	font-weight: 600;
 	line-height: 6.6rem;
@@ -80,6 +86,7 @@
 }
 
 .landing article p.message {
+	font-family: var(--ff-work-sans);
 	font-size: 1.8rem;
 	font-weight: 400;
 	line-height: 2.7rem;
@@ -88,7 +95,9 @@
 	margin-bottom: 2.4rem;
 }
 
-/* about section =========================== */
+
+
+/* ABOUT section =========================== */
 #aboutUs .grid-box {
 	margin-top: 12.8rem;
 	margin-bottom: 12.8rem;
@@ -104,10 +113,9 @@
 }
 
 #aboutUs p.message {
-
 	margin-bottom: 2rem;
 
-	font-family: "Work Sans";
+	font-family: var(--ff-work-sans);
 	font-style: normal;
 	font-size: 1.8rem;
 	font-weight: 400;
@@ -117,6 +125,3 @@
 
 	text-align: justify;
 }
-
-
-
