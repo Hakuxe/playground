@@ -225,8 +225,9 @@
 /* REVIEWS section ========================= */
 
 #reviews .grid-box {
-	margin-bottom: 40rem;
+	margin-bottom: 12.8rem;
 }
+
 #reviews .grid-box div {
 	/* width: 80%;  */
 }
@@ -252,3 +253,102 @@
 
 	text-align: justify;
 }
+
+/* EXPLORE section ========================= */
+
+#explore {
+	background-image: url("./assets/airplain.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 12.8rem 3.9rem;
+}
+
+#explore .container div {
+	text-align: center;
+}
+
+#explore h2.subtitles {
+	margin-bottom: 2.9rem;
+	color: var(--white);
+}
+
+#explore p.message {
+	max-width: 60%;
+	margin: 0 auto;
+
+	font-family: var(--ff-work-sans);
+	font-style: normal;
+	font-size: 1.8rem;
+	font-weight: 400;
+	line-height: 2.7rem;
+
+	color: var(--white);
+
+	text-align: center;
+}
+
+#explore .container div button {
+	margin-top: 3rem;
+}
+
+/* FOOTER ================== */
+
+footer {
+	background-color: var(--dark-background);
+}
+
+footer .flex-container {
+	display: flex;
+	justify-content: space-between;
+
+	padding-top: 6.4rem;
+}
+
+footer .flex-container p {
+	margin-bottom: 2.5rem;
+
+	font-family: var(--ff-josefin-sans);
+	font-size: 1.8rem;
+	font-weight: 500;
+	line-height: 1.8rem;
+	color: var(--white);
+}
+
+footer .flex-container ul {
+	list-style: none;
+}
+
+footer .flex-container ul li a {
+	margin-bottom: 1.9rem;
+	
+	font-size: 1.4rem;
+	font-family: var(--ff-josefin-sans);
+	line-height: 3rem;
+	font-weight: 400;
+
+	color: var(--white);
+	opacity: 0.8;
+}
+
+footer div#social ul{
+	display: flex;
+	gap: 2.5rem;
+}
+
+footer .line {
+	margin-top: 5.5rem;
+	padding-top: 3rem;
+	border-top: 0.2rem solid var(--border);
+}
+footer #copyright {
+	padding-bottom: 6.4rem;
+
+	font-size: 1.4rem;
+	line-height: 1.4rem;
+	font-weight: 400;
+	text-align: center;
+	color: var(--white);
+}
+
+
+

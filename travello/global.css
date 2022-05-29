@@ -9,6 +9,7 @@
 	--black: #0d114f;
 	--white: #fff;
 	--background: #f9fbff;
+	--dark-background:#0A0A0A;
 
 	--overlay: #040911;
 	--shadow: rgba(0, 0, 0, 0.08);
@@ -25,6 +26,7 @@
 
 	--ff-playfair-display: 'Playfair Display', serif;
 	--ff-work-sans: 'Work Sans', sans-serif;
+	--ff-josefin-sans:'Josefin Sans', sans-serif;
 }
 
 button,
