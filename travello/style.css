@@ -9,7 +9,7 @@
 	grid-template-rows: 1fr;
 }
 
-/* landgin ======================================== */
+/* LANDING ======================================== */
 
 .landing {
 	width: 100%;
@@ -34,6 +34,9 @@
 
 	padding-top: 2.2rem;
 	padding-bottom: 2.2rem;
+	padding-left: 12rem;
+	padding-right: 12rem;
+
 	border-bottom: 0.2rem solid var(--border);
 
 	font-family: var(--ff-work-sans);
@@ -58,6 +61,13 @@
 .landing header nav ul li a {
 	font-size: 2.4rem;
 	line-height: 2.4rem;
+	font-weight: 500;
+	color: var(--white);
+}
+
+.landing header nav ul li a.button {
+	font-size: 1.6rem;
+	line-height: 1.9rem;
 	font-weight: 500;
 	color: var(--white);
 }
@@ -265,6 +275,9 @@
 
 #explore .container div {
 	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 #explore h2.subtitles {
